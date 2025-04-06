@@ -9,7 +9,7 @@ The **Cultural Impact Assessment Tool (CIAT)** is a predictive model and assessm
 - **Country Comparison**: Interactive tool to compare cultural dimensions between countries
 - **Data Visualisation**: Visual representations of cultural dimensions, risk factors, and regional insights
 - **Machine Learning Model**: Predicts project success probabilities based on cultural dimensions and project-related factors
-- **Recommendation Engine**: Provides customized recommendations to mitigate cultural risks
+- **Recommendation Engine**: Provides customised recommendations to mitigate cultural risks
 - **Risk Factor Analysis**: Identifies key risk factors that could impact project success
 - **Success Probability Prediction**: Estimate overall project success probability
 - **Survey Integration**: Uses research-based survey data to improve predictions
@@ -130,7 +130,7 @@ CIAT/
 ### Country Comparison
 1. Navigate to the "Compare" page
 2. Select countries to compare
-3. View visualizations of cultural dimensions and cultural distances
+3. View visualisations of cultural dimensions and cultural distances
 4. Identify potential areas of cultural conflict or synergy
 
 ### Model Training
