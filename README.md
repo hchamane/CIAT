@@ -178,7 +178,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ## Contact
 - Author: Hainadine Chamane
-- Email: hchamane@gmail.com
+- Email: hchamane@outlook.com
 - Repository: https://github.com/hchamane/CIAT
 
 ## Acknowledgments
