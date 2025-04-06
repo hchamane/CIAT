@@ -65,7 +65,7 @@ The web interface provides the following functionality:
 
 ## Project Structure
 ```
-cultural-impact-tool/
+CIAT/
 │
 ├── ciat/                       
 │   ├── __init__.py
