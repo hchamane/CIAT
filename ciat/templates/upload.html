@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-5 mb-4 text-center">Upload Data</h1>
+            <p class="lead text-center mb-5">
+                Upload data files to train the Cultural Impact Assessment Tool model, 
+                import survey responses, and enhance your cultural insights.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Training Data</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Upload CSV files containing historical project data to train the 
+                        cultural impact assessment model. The model learns patterns between 
+                        cultural factors and project outcomes.
+                    </p>
+                    <form method="POST" enctype="multipart/form-data" action="{{ url_for('web_app.upload_data') }}">
+                        {{ form.hidden_tag() }}
+                        <input type="hidden" name="upload_type" value="training">
+                        
+                        <div class="mb-3">
+                            <label for="training_file" class="form-label">Training Data File (CSV)</label>
+                            <div class="input-group">
+                                {{ form.file(class="form-control", id="training_file", accept=".csv") }}
+                                <button class="btn btn-outline-secondary" type="submit">Upload</button>
+                            </div>
+                            <div class="form-text text-muted">
+                                CSV should include: project details, cultural dimensions, outcome measures
+                            </div>
+                            {% if form.file.errors %}
+                                <div class="text-danger mt-2">
+                                    {% for error in form.file.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" 
+                                   id="replace_training" name="replace_existing">
+                            <label class="form-check-label" for="replace_training">
+                                Replace existing training data
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">Survey Responses</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Upload survey response data to enrich the insights dashboard. 
+                        Survey data provides additional context for cultural impact assessments.
+                    </p>
+                    <form method="POST" enctype="multipart/form-data" action="{{ url_for('web_app.upload_data') }}">
+                        {{ form.csrf_token }}
+                        <input type="hidden" name="upload_type" value="survey">
+                        
+                        <div class="mb-3">
+                            <label for="survey_file" class="form-label">Survey Data File (CSV)</label>
+                            <div class="input-group">
+                                {{ form.file(class="form-control", id="survey_file", accept=".csv") }}
+                                <button class="btn btn-outline-secondary" type="submit">Upload</button>
+                            </div>
+                            <div class="form-text text-muted">
+                                CSV should include survey responses with standardised formats
+                            </div>
+                            {% if form.file.errors %}
+                                <div class="text-danger mt-2">
+                                    {% for error in form.file.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" 
+                                   id="append_survey" name="append_data" checked>
+                            <label class="form-check-label" for="append_survey">
+                                Append to existing survey data
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning">
+                    <h3 class="card-title mb-0">CSV File Guidelines</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>File Requirements</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ UTF-8 or Latin-1 Encoding</li>
+                                <li>✓ Comma-separated values</li>
+                                <li>✓ First row as headers</li>
+                                <li>✓ No special characters in headers</li>
+                                <li>✓ Consistent column formats</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Common Issues</h5>
+                            <ul class="list-unstyled">
+                                <li>✗ Extra whitespaces</li>
+                                <li>✗ Mixed data types</li>
+                                <li>✗ Inconsistent delimiters</li>
+                                <li>✗ Merged cells</li>
+                                <li>✗ Non-standard number formats</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Recommended Tools</h5>
+                            <ul class="list-unstyled">
+                                <li>🛠 Excel: Save as CSV</li>
+                                <li>🛠 Google Sheets: Download as CSV</li>
+                                <li>🛠 LibreOffice: Export as CSV</li>
+                                <li>🛠 Clean data with text editors</li>
+                                <li>🛠 Use online CSV cleaners</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    
+    fileInputs.forEach(input => {
+        input.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Validate file type
+                const validTypes = ['text/csv', 'application/vnd.ms-excel'];
+                if (!validTypes.includes(file.type)) {
+                    alert('Please upload a valid CSV file.');
+                    this.value = ''; // Clear the input
+                    return;
+                }
+                
+                // Validate file size (10MB limit)
+                const maxSize = 10 * 1024 * 1024; // 10MB
+                if (file.size > maxSize) {
+                    alert('File is too large. Maximum file size is 10MB.');
+                    this.value = ''; // Clear the input
+                    return;
+                }
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,858 @@
+PS C:\Users\hcham\Desktop\Essex\8. MSc Computing Project\Unit 9 - 30\Application\ciat_march_new\cultural-impact-tool> python -m unittest tests/test_unit.py
+2025-04-05 22:36:07,244 - INFO - CulturalImpactModel initialised
+
+Diagnostic: Communication Barrier Impacts
+Barriers: 1, Impact: 1.0
+Barriers: 2, Impact: 1.0
+Barriers: 3, Impact: 1.0
+Barriers: 4, Impact: 1.0
+Barriers: 5, Impact: 1.0
+.2025-04-05 22:36:07,256 - INFO - CulturalImpactModel initialised
+.2025-04-05 22:36:07,260 - INFO - CulturalImpactModel initialised
+.2025-04-05 22:36:07,260 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:07,260 - INFO - Training model with 10 samples
+2025-04-05 22:36:07,260 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:07,260 - INFO - Preprocessing data with shape: (10, 9)
+2025-04-05 22:36:07,276 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'team_size']
+2025-04-05 22:36:07,276 - INFO - Categorical features: []
+2025-04-05 22:36:07,280 - INFO - Data preprocessing complete. Output shape: (10, 9)
+2025-04-05 22:36:07,280 - INFO - Preprocessed data shape: (10, 9)
+2025-04-05 22:36:07,281 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:07,332 - INFO - Validation accuracy: 1.0000
+2025-04-05 22:36:07,332 - INFO - Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+C:\Users\hcham\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py:725: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+2025-04-05 22:36:07,586 - INFO - Cross-validation scores: [1. 1. 1. 1. 1.]
+2025-04-05 22:36:07,586 - INFO - Mean CV score: 1.0000
+2025-04-05 22:36:07,592 - INFO - Model saved to C:\Users\hcham\AppData\Local\Temp\tmphfk5xzja.pkl
+2025-04-05 22:36:07,608 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:07,608 - INFO - Model loaded from C:\Users\hcham\AppData\Local\Temp\tmphfk5xzja.pkl
+2025-04-05 22:36:07,608 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:07,608 - INFO - Making predictions for 1 instances
+.2025-04-05 22:36:07,608 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:07,608 - INFO - Training model with 10 samples
+2025-04-05 22:36:07,608 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:07,608 - INFO - Preprocessing data with shape: (10, 9)
+2025-04-05 22:36:07,608 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'team_size']
+2025-04-05 22:36:07,608 - INFO - Categorical features: []
+2025-04-05 22:36:07,623 - INFO - Data preprocessing complete. Output shape: (10, 9)
+2025-04-05 22:36:07,623 - INFO - Preprocessed data shape: (10, 9)
+2025-04-05 22:36:07,623 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:07,674 - INFO - Validation accuracy: 1.0000
+2025-04-05 22:36:07,674 - INFO - Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+C:\Users\hcham\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py:725: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+2025-04-05 22:36:07,922 - INFO - Cross-validation scores: [1. 1. 1. 1. 1.]
+2025-04-05 22:36:07,922 - INFO - Mean CV score: 1.0000
+2025-04-05 22:36:07,922 - INFO - Making predictions for 10 instances
+.2025-04-05 22:36:07,922 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:07,922 - INFO - Training model with 10 samples
+2025-04-05 22:36:07,922 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:07,922 - INFO - Preprocessing data with shape: (10, 9)
+2025-04-05 22:36:07,938 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'team_size']
+2025-04-05 22:36:07,938 - INFO - Categorical features: []
+2025-04-05 22:36:07,940 - INFO - Data preprocessing complete. Output shape: (10, 9)
+2025-04-05 22:36:07,942 - INFO - Preprocessed data shape: (10, 9)
+2025-04-05 22:36:07,942 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:07,996 - INFO - Validation accuracy: 1.0000
+2025-04-05 22:36:07,996 - INFO - Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+C:\Users\hcham\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py:725: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+2025-04-05 22:36:08,235 - INFO - Cross-validation scores: [1. 1. 1. 1. 1.]
+2025-04-05 22:36:08,235 - INFO - Mean CV score: 1.0000
+.2025-04-05 22:36:08,235 - INFO - CulturalImpactModel initialised
+.2025-04-05 22:36:08,235 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:08,235 - INFO - Training model with 10 samples
+2025-04-05 22:36:08,235 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:08,235 - INFO - Preprocessing data with shape: (10, 9)
+2025-04-05 22:36:08,235 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'team_size']
+2025-04-05 22:36:08,235 - INFO - Categorical features: []
+2025-04-05 22:36:08,235 - INFO - Data preprocessing complete. Output shape: (10, 9)
+2025-04-05 22:36:08,235 - INFO - Preprocessed data shape: (10, 9)
+2025-04-05 22:36:08,235 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:08,301 - INFO - Validation accuracy: 1.0000
+2025-04-05 22:36:08,301 - INFO - Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+C:\Users\hcham\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py:725: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+2025-04-05 22:36:08,549 - INFO - Cross-validation scores: [1. 1. 1. 1. 1.]
+2025-04-05 22:36:08,549 - INFO - Mean CV score: 1.0000
+.2025-04-05 22:36:08,549 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:08,549 - INFO - Training model with 10 samples
+2025-04-05 22:36:08,549 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:08,549 - INFO - Preprocessing data with shape: (10, 9)
+2025-04-05 22:36:08,549 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'team_size']
+2025-04-05 22:36:08,549 - INFO - Categorical features: []
+2025-04-05 22:36:08,562 - INFO - Data preprocessing complete. Output shape: (10, 9)
+2025-04-05 22:36:08,562 - INFO - Preprocessed data shape: (10, 9)
+2025-04-05 22:36:08,562 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:08,615 - INFO - Validation accuracy: 1.0000
+2025-04-05 22:36:08,615 - INFO - Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+C:\Users\hcham\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py:725: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+2025-04-05 22:36:08,872 - INFO - Cross-validation scores: [1. 1. 1. 1. 1.]
+2025-04-05 22:36:08,872 - INFO - Mean CV score: 1.0000
+2025-04-05 22:36:08,873 - INFO - Making predictions for 1 instances
+.2025-04-05 22:36:08,876 - INFO - CulturalImpactModel initialised
+2025-04-05 22:36:09,126 - INFO - Training model with 10 samples
+2025-04-05 22:36:09,126 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:09,126 - INFO - Preprocessing data with shape: (10, 9)
+2025-04-05 22:36:09,126 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'team_size']
+2025-04-05 22:36:09,126 - INFO - Categorical features: []
+2025-04-05 22:36:09,126 - INFO - Data preprocessing complete. Output shape: (10, 9)
+2025-04-05 22:36:09,126 - INFO - Preprocessed data shape: (10, 9)
+2025-04-05 22:36:09,126 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:09,186 - INFO - Validation accuracy: 1.0000
+2025-04-05 22:36:09,186 - INFO - Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+C:\Users\hcham\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py:725: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+2025-04-05 22:36:09,423 - INFO - Cross-validation scores: [1. 1. 1. 1. 1.]
+2025-04-05 22:36:09,423 - INFO - Mean CV score: 1.0000
+.
+----------------------------------------------------------------------
+Ran 10 tests in 2.353s
+
+OK
+PS C:\Users\hcham\Desktop\Essex\8. MSc Computing Project\Unit 9 - 30\Application\ciat_march_new\cultural-impact-tool> python tests/test_performance.py
+CULTURAL IMPACT ASSESSMENT TOOL - PERFORMANCE TEST
+============================================================
+2025-04-05 22:36:21,122 - INFO - CulturalImpactModel initialised
+
+1. Testing Predictive Performance...
+   Training model on synthetic dataset...
+2025-04-05 22:36:21,138 - INFO - Training model with 700 samples
+2025-04-05 22:36:21,138 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:21,138 - INFO - Preprocessing data with shape: (700, 15)
+2025-04-05 22:36:21,145 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:21,145 - INFO - Categorical features: []
+2025-04-05 22:36:21,150 - INFO - Data preprocessing complete. Output shape: (700, 15)
+2025-04-05 22:36:21,150 - INFO - Preprocessed data shape: (700, 15)
+2025-04-05 22:36:21,150 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:21,456 - INFO - Validation accuracy: 0.7929
+2025-04-05 22:36:21,456 - INFO - Precision: 0.7098, Recall: 0.7929, F1: 0.7431
+2025-04-05 22:36:23,283 - INFO - Cross-validation scores: [0.83571429 0.83571429 0.83571429 0.82857143 0.83571429]
+2025-04-05 22:36:23,283 - INFO - Mean CV score: 0.8343
+   Model trained in 2.14 seconds
+   Making predictions on test data...
+2025-04-05 22:36:23,283 - INFO - Making predictions for 300 instances
+
+   Predictive Performance Metrics:
+   - Accuracy:    0.8200
+   - Precision:   0.3043
+   - Recall:      0.1556
+   - F1 Score:    0.2059
+   - ROC-AUC:     0.7387
+   - Specificity: 0.9373
+
+   Confusion Matrix:
+   True Negative: 239, False Positive: 16
+   False Negative: 38, True Positive: 7
+
+   Training Time: 2.14 seconds
+
+2. Testing Processing Time...
+   Testing cultural distance calculation time...
+   Average cultural distance calculation: 2.47 ms
+   Testing communication impact calculation time...
+   Average communication impact calculation: 1.80 ms
+   Testing prediction time...
+2025-04-05 22:36:23,606 - INFO - Training model with 500 samples
+2025-04-05 22:36:23,606 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:23,606 - INFO - Preprocessing data with shape: (500, 15)
+2025-04-05 22:36:23,612 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:23,613 - INFO - Categorical features: []
+2025-04-05 22:36:23,616 - INFO - Data preprocessing complete. Output shape: (500, 15)
+2025-04-05 22:36:23,617 - INFO - Preprocessed data shape: (500, 15)
+2025-04-05 22:36:23,617 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:23,893 - INFO - Validation accuracy: 0.8500
+2025-04-05 22:36:23,893 - INFO - Precision: 0.8036, Recall: 0.8500, F1: 0.7980
+2025-04-05 22:36:25,268 - INFO - Cross-validation scores: [0.91 0.9  0.85 0.85 0.85]
+2025-04-05 22:36:25,269 - INFO - Mean CV score: 0.8720
+2025-04-05 22:36:25,269 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,272 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,275 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,279 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,295 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,302 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,304 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,306 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,308 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,311 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,311 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,311 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,311 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,311 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,311 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,328 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,331 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,334 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,336 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,338 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,340 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,343 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,346 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,346 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,346 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,346 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,346 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,346 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,362 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,362 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,362 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,362 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,362 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,362 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,378 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,396 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,398 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,400 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,403 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,404 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,407 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,410 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,412 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,412 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,412 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,412 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,412 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,412 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,428 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,428 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,428 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,428 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,428 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,428 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,461 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,463 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,466 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,468 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,470 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,473 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,476 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,478 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,478 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,478 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,478 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,478 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,478 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,494 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,494 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,494 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,494 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,494 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,494 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,510 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,510 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,510 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,510 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,510 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,510 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,526 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:25,528 - INFO - Making predictions for 1 instances
+   Average prediction time: 2.62 ms
+   Testing recommendation generation time...
+   Average recommendation generation time: 0.11 ms
+
+   Operation Timing Results:
+   - Cultural Distance Calculation:  2.47 ms
+   - Communication Impact Assessment: 1.80 ms
+   - Prediction Time:                2.62 ms
+   - Recommendation Generation:      0.11 ms
+
+3. Testing Scalability...
+   Testing with 100 samples...
+2025-04-05 22:36:25,547 - INFO - Training model with 100 samples
+2025-04-05 22:36:25,547 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:25,548 - INFO - Preprocessing data with shape: (100, 15)
+2025-04-05 22:36:25,550 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:25,551 - INFO - Categorical features: []
+2025-04-05 22:36:25,554 - INFO - Data preprocessing complete. Output shape: (100, 15)
+2025-04-05 22:36:25,554 - INFO - Preprocessed data shape: (100, 15)
+2025-04-05 22:36:25,555 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:25,702 - INFO - Validation accuracy: 0.7500
+2025-04-05 22:36:25,702 - INFO - Precision: 0.7255, Recall: 0.7500, F1: 0.7359
+2025-04-05 22:36:26,372 - INFO - Cross-validation scores: [0.8  0.9  0.75 0.8  0.9 ]
+2025-04-05 22:36:26,372 - INFO - Mean CV score: 0.8300
+   Training time for 100 samples: 0.82 seconds
+2025-04-05 22:36:26,372 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,372 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,372 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,372 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,384 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,386 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,389 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,391 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,393 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,396 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,398 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,400 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,402 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,406 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,408 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,410 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,413 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,416 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,418 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,420 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,423 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,425 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,427 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,430 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,433 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,435 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,438 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,440 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,443 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,446 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,448 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,451 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,452 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,455 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,457 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,459 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,462 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,465 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,467 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,469 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,471 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,474 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,477 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,480 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,482 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,485 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,487 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,489 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,491 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,495 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,498 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,500 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,501 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,517 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,517 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,517 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,517 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,517 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,517 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,533 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,533 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,533 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,533 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,533 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,533 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,550 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,553 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,554 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,557 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,559 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,561 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,564 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,566 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,567 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,567 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,567 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,567 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,567 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,567 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,583 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,583 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,583 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,592 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,592 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,592 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,599 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,599 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,599 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,599 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,599 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,611 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,614 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,617 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:26,619 - INFO - Making predictions for 1 instances
+   Average prediction time: 2.49 ms
+   Testing with 500 samples...
+2025-04-05 22:36:26,624 - INFO - Training model with 500 samples
+2025-04-05 22:36:26,625 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:26,625 - INFO - Preprocessing data with shape: (500, 15)
+2025-04-05 22:36:26,629 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:26,630 - INFO - Categorical features: []
+2025-04-05 22:36:26,633 - INFO - Data preprocessing complete. Output shape: (500, 15)
+2025-04-05 22:36:26,633 - INFO - Preprocessed data shape: (500, 15)
+2025-04-05 22:36:26,633 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:26,897 - INFO - Validation accuracy: 0.8300
+2025-04-05 22:36:26,897 - INFO - Precision: 0.7853, Recall: 0.8300, F1: 0.7836
+2025-04-05 22:36:28,200 - INFO - Cross-validation scores: [0.83 0.88 0.87 0.85 0.84]
+2025-04-05 22:36:28,200 - INFO - Mean CV score: 0.8540
+   Training time for 500 samples: 1.58 seconds
+2025-04-05 22:36:28,200 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,216 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,216 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,216 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,216 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,216 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,216 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,231 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,233 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,235 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,238 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,241 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,243 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,245 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,248 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,251 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,253 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,256 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,258 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,261 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,264 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,267 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,269 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,272 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,274 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,277 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,280 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,283 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,283 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,283 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,283 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,292 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,294 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,294 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,299 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,314 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,314 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,314 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,314 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,314 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,314 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,333 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,335 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,338 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,340 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,343 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,345 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,349 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,349 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,349 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,349 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,349 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,349 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,364 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,364 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,364 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,364 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,364 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,364 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,380 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,380 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,380 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,380 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,380 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,380 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,398 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,401 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,404 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,406 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,409 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,414 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,415 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,415 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,415 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,415 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,415 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,431 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,431 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,440 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,444 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,450 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,454 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,458 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,463 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,467 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,470 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,473 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,476 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,480 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,484 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,487 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,489 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,492 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,496 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:28,499 - INFO - Making predictions for 1 instances
+   Average prediction time: 3.01 ms
+   Testing with 1000 samples...
+2025-04-05 22:36:28,504 - INFO - Training model with 1000 samples
+2025-04-05 22:36:28,505 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:28,505 - INFO - Preprocessing data with shape: (1000, 15)
+2025-04-05 22:36:28,514 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:28,514 - INFO - Categorical features: []
+2025-04-05 22:36:28,514 - INFO - Data preprocessing complete. Output shape: (1000, 15)
+2025-04-05 22:36:28,514 - INFO - Preprocessed data shape: (1000, 15)
+2025-04-05 22:36:28,514 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:28,946 - INFO - Validation accuracy: 0.8700
+2025-04-05 22:36:28,946 - INFO - Precision: 0.8512, Recall: 0.8700, F1: 0.8596
+2025-04-05 22:36:30,791 - INFO - Cross-validation scores: [0.855 0.83  0.85  0.83  0.86 ]
+2025-04-05 22:36:30,791 - INFO - Mean CV score: 0.8450
+   Training time for 1000 samples: 2.29 seconds
+2025-04-05 22:36:30,791 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,791 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,791 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,791 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,791 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,807 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,807 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,807 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,807 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,807 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,807 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,822 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,841 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,843 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,844 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,847 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,850 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,852 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,855 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,875 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,875 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,875 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,875 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,875 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,875 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,906 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,909 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,911 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,914 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,916 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,919 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,922 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,924 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,926 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,928 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,931 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,934 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,936 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,938 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,941 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,943 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,945 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,948 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,950 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,953 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,955 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,956 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,956 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,956 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,956 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,956 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,956 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,972 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,975 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,975 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,975 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,975 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,975 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,975 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:30,988 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,005 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,008 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,010 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,012 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,014 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,017 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,020 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,022 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,025 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,027 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,029 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,031 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,034 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,036 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:31,039 - INFO - Making predictions for 1 instances
+   Average prediction time: 2.51 ms
+   Testing with 2000 samples...
+2025-04-05 22:36:31,044 - INFO - Training model with 2000 samples
+2025-04-05 22:36:31,044 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:31,044 - INFO - Preprocessing data with shape: (2000, 15)
+2025-04-05 22:36:31,055 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:31,055 - INFO - Categorical features: []
+2025-04-05 22:36:31,055 - INFO - Data preprocessing complete. Output shape: (2000, 15)
+2025-04-05 22:36:31,055 - INFO - Preprocessed data shape: (2000, 15)
+2025-04-05 22:36:31,055 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:31,781 - INFO - Validation accuracy: 0.8625
+2025-04-05 22:36:31,781 - INFO - Precision: 0.8190, Recall: 0.8625, F1: 0.8156
+2025-04-05 22:36:34,833 - INFO - Cross-validation scores: [0.8325 0.835  0.8275 0.86   0.8625]
+2025-04-05 22:36:34,839 - INFO - Mean CV score: 0.8435
+   Training time for 2000 samples: 3.79 seconds
+2025-04-05 22:36:34,839 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,839 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,839 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,839 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,849 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,849 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,849 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,849 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,862 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,865 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,868 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,872 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,874 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,877 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,880 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,883 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,883 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,883 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,892 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,895 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,897 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,901 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,901 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,901 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,901 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,901 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,915 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,915 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,915 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,915 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,915 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,915 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,933 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,937 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,940 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,942 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,945 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,949 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,949 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,949 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,958 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,961 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,964 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,965 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,971 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,974 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,976 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,979 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,982 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,982 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,982 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,992 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,995 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:34,999 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,002 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,006 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,009 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,011 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,013 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,015 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,019 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,019 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,019 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,019 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,030 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,031 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,036 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,036 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,036 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,036 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,047 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,047 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,047 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,047 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,047 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,047 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,063 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,066 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,070 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,072 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,075 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,077 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,080 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,081 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,081 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,081 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,081 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,081 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,099 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,099 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,099 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,099 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,113 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,113 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,119 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,119 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,119 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,130 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,134 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:35,138 - INFO - Making predictions for 1 instances
+   Average prediction time: 3.03 ms
+   Testing with 5000 samples...
+2025-04-05 22:36:35,147 - INFO - Training model with 5000 samples
+2025-04-05 22:36:35,147 - INFO - Unique values in target: [0 1]
+2025-04-05 22:36:35,147 - INFO - Preprocessing data with shape: (5000, 15)
+2025-04-05 22:36:35,179 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:36:35,179 - INFO - Categorical features: []
+2025-04-05 22:36:35,201 - INFO - Data preprocessing complete. Output shape: (5000, 15)
+2025-04-05 22:36:35,202 - INFO - Preprocessed data shape: (5000, 15)
+2025-04-05 22:36:35,204 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:36:36,648 - INFO - Validation accuracy: 0.8400
+2025-04-05 22:36:36,648 - INFO - Precision: 0.7866, Recall: 0.8400, F1: 0.8008
+2025-04-05 22:36:42,720 - INFO - Cross-validation scores: [0.847 0.849 0.843 0.856 0.862]
+2025-04-05 22:36:42,720 - INFO - Mean CV score: 0.8514
+   Training time for 5000 samples: 7.57 seconds
+2025-04-05 22:36:42,720 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,720 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,720 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,736 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,753 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,755 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,756 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,758 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,761 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,764 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,766 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,769 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,771 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,773 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,775 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,777 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,780 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,782 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,784 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,786 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,788 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,790 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,792 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,795 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,798 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,800 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,802 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,803 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,819 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,835 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,835 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,835 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,835 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,835 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,835 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,851 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,853 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,855 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,857 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,860 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,863 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,865 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,867 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,870 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,872 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,874 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,876 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,879 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,881 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,884 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,886 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,889 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,893 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,896 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,899 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,902 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,902 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,902 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,911 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,911 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,911 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,918 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,918 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,918 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,918 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,918 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,934 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,934 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,934 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,934 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,948 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,950 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,953 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,955 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,958 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,962 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,964 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,967 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,968 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,972 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,972 - INFO - Making predictions for 1 instances
+2025-04-05 22:36:42,977 - INFO - Making predictions for 1 instances
+   Average prediction time: 2.57 ms
+   Scalability results plot saved to temp/performance/scalability_results.png
+
+Performance testing completed successfully!

@@ -1,0 +1,6 @@
+project_id,project_name,primary_region,project_complexity,technical_requirements,stakeholder_count,team_size,project_duration,virtual_team_ratio,language_barriers,communication_barriers,prior_collaboration,team_diversity,industry_sector,primary_country,power_distance,individualism,masculinity,uncertainty_avoidance,long_term_orientation,indulgence,project_success
+PROJ-001,Project 1,Europe,3,4,15,8,12,50,2,3,4,medium,Technology,United Kingdom,35,89,66,35,51,69,1
+PROJ-002,Project 2,North America,4,3,20,12,18,75,3,4,2,high,Finance,United States,40,91,62,46,26,68,1
+PROJ-003,Project 3,Asia Pacific,5,5,10,6,6,25,1,2,5,low,Healthcare,China,80,20,66,30,87,24,0
+PROJ-004,Project 4,Europe,2,3,8,5,9,30,1,1,3,medium,Education,Germany,35,67,66,65,83,40,1
+PROJ-005,Project 5,Africa,3,2,12,10,24,40,4,5,1,high,Mining,South Africa,49,65,63,49,34,63,0

@@ -1,0 +1,483 @@
+{% extends "base.html" %}
+
+{% block title %}CIAT - Compare Countries{% endblock %}
+
+{% block head_extra %}
+<style>
+    .country-card {
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .country-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .country-card.selected {
+        border-color: #4e73df;
+        background-color: #f8f9fa;
+    }
+    .comparison-help {
+        background-color: #e8f4f8;
+        border-left: 4px solid #4e73df;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h3 mb-0">Compare Cultural Dimensions</h1>
+            </div>
+            <div class="card-body">
+                <div class="comparison-help">
+                    <h5>About Cultural Comparisons</h5>
+                    <p>
+                        Compare cultural dimensions between countries to understand potential areas of alignment and conflict.
+                        Select two or more countries to visualise their cultural profiles and calculate the cultural distance between them.
+                    </p>
+                    <p class="mb-0">
+                        <strong>Tip:</strong> Selecting countries from different regions can help identify significant cultural differences that may impact international projects.
+                    </p>
+                </div>
+                
+                <form method="POST" action="{{ url_for('web_app.compare_countries') }}">
+                    {{ form.csrf_token }}
+                    <div class="row mb-4">
+                        <div class="col-md-9">
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">Select Countries to Compare</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>Choose at least two countries to compare their cultural dimensions.</p>
+                                    
+                                    <div class="mb-3">
+                                        <label for="country-search" class="form-label">Search Countries:</label>
+                                        <input type="text" id="country-search" class="form-control" placeholder="Type to filter countries...">
+                                    </div>
+                                    
+                                    <div class="row country-grid" id="country-grid">
+                                        {% for country in countries|sort if country is string and country|length > 1 %}
+                                            <div class="col-md-4 col-sm-6 mb-3 country-item">
+                                                <div class="card country-card h-100" data-country="{{ country }}">
+                                                    <div class="card-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input country-checkbox" type="checkbox" value="{{ country }}" id="country-{{ loop.index }}" name="countries">
+                                                            <label class="form-check-label w-100" for="country-{{ loop.index }}">
+                                                                {{ country }}
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h6 class="mb-0">Selected Countries</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div id="selected-countries-list">
+                                        <p class="text-muted" id="no-countries-message">No countries selected</p>
+                                        <ul class="list-group" id="selected-countries-ul"></ul>
+                                    </div>
+                                    <div class="d-grid gap-2 mt-3">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" id="select-all-btn">Select All</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" id="clear-all-btn">Clear All</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary" id="compare-btn" disabled>
+                                            Compare Selected
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+					<div class="card mb-4">
+						<div class="card-header bg-light">
+							<h5 class="mb-0">Regions Quick Select</h5>
+						</div>
+						<div class="card-body">
+							<p>Select countries by region to quickly compare cultural differences:</p>
+							<div class="row">
+								<div class="col-md-2 mb-2">
+									<button type="button" class="btn btn-primary w-100 region-btn" data-region="Europe">
+										Europe
+									</button>
+								</div>
+								<div class="col-md-2 mb-2">
+									<button type="button" class="btn btn-success w-100 region-btn" data-region="Africa">
+										Africa
+									</button>
+								</div>
+								<div class="col-md-2 mb-2">
+									<button type="button" class="btn btn-info w-100 region-btn" data-region="Asia">
+										Asia
+									</button>
+								</div>
+								<div class="col-md-2 mb-2">
+									<button type="button" class="btn btn-warning w-100 region-btn" data-region="North America">
+										North America
+									</button>
+								</div>
+								<div class="col-md-2 mb-2">
+									<button type="button" class="btn btn-danger w-100 region-btn" data-region="South America">
+										South America
+									</button>
+								</div>
+								<div class="col-md-2 mb-2">
+									<button type="button" class="btn btn-secondary w-100 region-btn" data-region="Middle East">
+										Middle East
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">Popular Comparisons</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary w-100 common-comparison" data-countries='["United States", "China", "India"]'>
+                                                USA - China - India
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary w-100 common-comparison" data-countries='["United Kingdom", "Germany", "France"]'>
+                                                UK - Germany - France
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary w-100 common-comparison" data-countries='["Japan", "China"]'>
+                                                Japan - China
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary w-100 common-comparison" data-countries='["South Africa", "Nigeria", "Kenya"]'>
+                                                South Africa - Nigeria - Kenya
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">Understanding Cultural Dimensions</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="accordion" id="dimensionsAccordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                    Power Distance
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#dimensionsAccordion">
+                                                <div class="accordion-body">
+                                                    <strong>Power Distance</strong> expresses the degree to which the less powerful members of a society accept and expect that power is distributed unequally. High power distance cultures tend to have more hierarchical organisations and greater respect for authority.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Individualism
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#dimensionsAccordion">
+                                                <div class="accordion-body">
+                                                    <strong>Individualism</strong> versus collectivism refers to the degree to which people in a society are integrated into groups. Individualistic societies emphasise personal achievements and individual rights, while collectivist societies emphasise group harmony and loyalty.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Masculinity
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#dimensionsAccordion">
+                                                <div class="accordion-body">
+                                                    <strong>Masculinity</strong> versus femininity refers to the distribution of values between the genders. Masculine cultures value competitiveness, assertiveness, and material success, while feminine cultures place more value on relationships and quality of life.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFour">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    Uncertainty Avoidance
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#dimensionsAccordion">
+                                                <div class="accordion-body">
+                                                    <strong>Uncertainty Avoidance</strong> expresses the degree to which members of a society feel uncomfortable with uncertainty and ambiguity. High uncertainty avoidance cultures maintain rigid codes of belief and behavior, while low uncertainty avoidance cultures are more relaxed and open to change.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                    Long-term Orientation
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#dimensionsAccordion">
+                                                <div class="accordion-body">
+                                                    <strong>Long-term Orientation</strong> deals with society's search for virtue. Societies with a long-term orientation tend to emphasise persistence, perseverance, saving, and being adaptable. Short-term oriented societies value tradition, immediate gratification, and social obligations.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSix">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                    Indulgence
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#dimensionsAccordion">
+                                                <div class="accordion-body">
+                                                    <strong>Indulgence</strong> versus restraint reflects the extent to which people try to control their desires and impulses. Indulgent societies allow relatively free gratification of basic and natural human drives, while restrained societies are more likely to believe that such gratification needs to be curbed and regulated by norms.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Country search functionality
+    const searchInput = document.getElementById('country-search');
+    const countryItems = document.querySelectorAll('.country-item');
+    
+    // Filter out items that are not valid countries (empty or just numbers)
+    const validCountryItems = Array.from(countryItems).filter(item => {
+        const countryName = item.querySelector('.country-card').dataset.country;
+        return countryName && countryName.trim().length > 1 && isNaN(countryName);
+    });
+    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        validCountryItems.forEach(item => {
+            const countryName = item.querySelector('.country-card').dataset.country.toLowerCase();
+            if (countryName.includes(searchTerm)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+    
+    // Ensure countries display names instead of numbers
+    const countryCards = document.querySelectorAll('.country-card');
+    countryCards.forEach(card => {
+        // Get the checkbox inside this card
+        const checkbox = card.querySelector('.country-checkbox');
+        
+        // Find the proper country name from the card's dataset
+        const countryName = card.dataset.country;
+        
+        // Skip if no valid country name
+        if (!countryName || countryName.trim().length < 2 || !isNaN(countryName)) {
+            card.closest('.country-item').style.display = 'none';
+            return;
+        }
+        
+        // Update the checkbox value and label
+        if (checkbox) {
+            checkbox.value = countryName;
+            
+            // Update the label next to the checkbox
+            const label = card.querySelector('.form-check-label');
+            if (label) {
+                label.textContent = countryName;
+            }
+        }
+    });
+    
+    // Country selection functionality
+    const checkboxes = document.querySelectorAll('.country-checkbox');
+    const selectedCountriesList = document.getElementById('selected-countries-ul');
+    const noCountriesMessage = document.getElementById('no-countries-message');
+    const compareBtn = document.getElementById('compare-btn');
+    
+    function updateSelectedCountries() {
+        selectedCountriesList.innerHTML = '';
+        
+        const selectedCheckboxes = Array.from(checkboxes).filter(cb => 
+            cb.checked && 
+            cb.value && 
+            cb.value.trim().length > 1 && 
+            isNaN(cb.value)
+        );
+        
+        if (selectedCheckboxes.length === 0) {
+            noCountriesMessage.style.display = 'block';
+            compareBtn.disabled = true;
+        } else {
+            noCountriesMessage.style.display = 'none';
+            compareBtn.disabled = selectedCheckboxes.length < 2;
+            
+            selectedCheckboxes.forEach(cb => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                li.textContent = cb.value;
+                
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'btn btn-sm btn-outline-danger';
+                removeBtn.innerHTML = '&times;';
+                removeBtn.onclick = function() {
+                    // Find and uncheck the corresponding checkbox
+                    const checkbox = Array.from(checkboxes).find(c => c.value === cb.value);
+                    if (checkbox) {
+                        checkbox.checked = false;
+                        checkbox.closest('.country-card').classList.remove('selected');
+                    }
+                    updateSelectedCountries();
+                };
+                
+                li.appendChild(removeBtn);
+                selectedCountriesList.appendChild(li);
+            });
+        }
+    }
+    
+    // Initialise selected countries
+    updateSelectedCountries();
+    
+    // Add event listeners to country cards
+    countryCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // If the click was directly on the checkbox, don't toggle
+            if (e.target.type === 'checkbox') return;
+            
+            const checkbox = this.querySelector('.country-checkbox');
+            if (checkbox) {
+                checkbox.checked = !checkbox.checked;
+                this.classList.toggle('selected', checkbox.checked);
+                
+                updateSelectedCountries();
+            }
+        });
+    });
+    
+    // Add event listeners to checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            this.closest('.country-card').classList.toggle('selected', this.checked);
+            updateSelectedCountries();
+        });
+    });
+    
+    // Select All and Clear All buttons
+    document.getElementById('select-all-btn').addEventListener('click', function() {
+        checkboxes.forEach(cb => {
+            const countryItem = cb.closest('.country-item');
+            if (countryItem.style.display !== 'none' && 
+                cb.value && 
+                cb.value.trim().length > 1 && 
+                isNaN(cb.value)) {
+                cb.checked = true;
+                cb.closest('.country-card').classList.add('selected');
+            }
+        });
+        updateSelectedCountries();
+    });
+    
+    document.getElementById('clear-all-btn').addEventListener('click', function() {
+        checkboxes.forEach(cb => {
+            cb.checked = false;
+            cb.closest('.country-card').classList.remove('selected');
+        });
+        updateSelectedCountries();
+    });
+    
+    // Region quick select buttons
+    const regionMap = {
+        'Europe': ['United Kingdom', 'Germany', 'France', 'Italy', 'Spain', 'Portugal'],
+        'Africa': ['South Africa', 'Nigeria', 'Kenya', 'Egypt', 'Morocco', 'Mozambique'],
+        'Asia': ['Japan', 'China', 'India'],
+        'North America': ['United States', 'Canada', 'Mexico'],
+        'South America': ['Brazil', 'Argentina', 'Colombia', 'Chile', 'Peru'],
+        'Middle East': ['Saudi Arabia', 'UAE', 'Israel', 'Turkey', 'Egypt']
+    };
+    
+    document.querySelectorAll('.region-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const region = this.dataset.region;
+            const regionCountries = regionMap[region] || [];
+            
+            // Clear existing selections
+            checkboxes.forEach(cb => {
+                cb.checked = false;
+                cb.closest('.country-card').classList.remove('selected');
+            });
+            
+            // Select countries from the region
+            checkboxes.forEach(cb => {
+                if (regionCountries.includes(cb.value)) {
+                    cb.checked = true;
+                    cb.closest('.country-card').classList.add('selected');
+                }
+            });
+            
+            updateSelectedCountries();
+        });
+    });
+    
+    // Common comparison buttons
+    document.querySelectorAll('.common-comparison').forEach(btn => {
+        btn.addEventListener('click', function() {
+            try {
+                const countries = JSON.parse(this.dataset.countries);
+                
+                // Clear existing selections
+                checkboxes.forEach(cb => {
+                    cb.checked = false;
+                    cb.closest('.country-card').classList.remove('selected');
+                });
+                
+                // Select the specified countries
+                checkboxes.forEach(cb => {
+                    if (countries.includes(cb.value)) {
+                        cb.checked = true;
+                        cb.closest('.country-card').classList.add('selected');
+                    }
+                });
+                
+                updateSelectedCountries();
+            } catch (e) {
+                console.error("Error parsing countries JSON:", e);
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

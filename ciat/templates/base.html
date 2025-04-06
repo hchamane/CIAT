@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{% block title %}Cultural Impact Assessment Tool{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- CSS FILES -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/custom-theme.css') }}" rel="stylesheet">
+	
+<!--
+
+TemplateMo 590 topic listing
+
+From https://templatemo.com/tm-590-topic-listing
+
+-->
+
+<!-- CSS FILES -->
+    <style>
+        :root {
+            --primary-color: #13547a;
+            --secondary-color: #80d0c7;
+        }
+        
+        body {
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .site-header {
+            padding: 20px 0;
+        }
+        
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 10px 20px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+        }
+        
+        .dropdown-menu {
+            background-color: #fff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-item {
+            font-family: 'Montserrat', sans-serif;
+            color: #13547a !important;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #80d0c7 !important;
+        }
+        
+        main {
+            flex: 1;
+            padding: 40px 0;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 25px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            border-bottom: none;
+            padding: 20px 25px;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .btn {
+            border-radius: 50px;
+            padding: 10px 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #13547a;
+            border-color: #13547a;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0f425f;
+            border-color: #0f425f;
+        }
+        
+        .btn-success {
+            background-color: #80d0c7;
+            border-color: #80d0c7;
+            color: #fff;
+        }
+        
+        .btn-success:hover {
+            background-color: #6dc0b7;
+            border-color: #6dc0b7;
+        }
+        
+        .btn-outline-primary {
+            border-color: #fff;
+            color: #fff;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: #fff;
+            color: #fff;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 50px;
+            border: none;
+            padding: 12px 20px;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 3px rgba(128, 208, 199, 0.25);
+        }
+        
+        /* Footer styling */
+        .site-footer {
+            padding: 60px 0 40px;
+            color: #fff;
+        }
+        
+        .site-footer h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .site-footer a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .site-footer a:hover {
+            color: #fff;
+        }
+        
+        /* Quick Actions Section */
+        .quick-actions {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .quick-actions h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #13547a;
+            margin-bottom: 20px;
+        }
+        
+        .quick-actions .btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    {% block head_extra %}{% endblock %}
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a class="navbar-brand text-white" href="{{ url_for('web_app.index') }}">
+                    <i class="bi-globe me-2"></i>CIAT
+                </a>
+                
+                <button class="navbar-toggler d-lg-none bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <nav class="navbar navbar-expand-lg mt-3">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('web_app.index') %}active{% endif %}" href="{{ url_for('web_app.index') }}">Dashboard</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('web_app.assess_project') %}active{% endif %}" href="{{ url_for('web_app.assess_project') }}">Assess Project</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == url_for('web_app.compare_countries') %}active{% endif %}" href="{{ url_for('web_app.compare_countries') }}">Compare Countries</a>
+                            </li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Resources
+								</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="{{ url_for('web_app.train_model') }}">Train Model</a></li>
+									<li><a class="dropdown-item" href="{{ url_for('web_app.upload_data') }}">Upload Data</a></li>
+									<li><a class="dropdown-item" href="{{ url_for('web_app.survey_insights_view') }}">Survey Insights</a></li>
+									<li><hr class="dropdown-divider"></li>
+									<li><a class="dropdown-item" href="https://github.com/hchamane/CIAT.git" target="_blank">Documentation</a></li>
+								</ul>
+							</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category or 'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+        
+    </main>
+	
+    <!-- footer -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="{{ url_for('web_app.index') }}">Dashboard</a></li>
+                        <li class="mb-2"><a href="{{ url_for('web_app.assess_project') }}">Assess Project</a></li>
+                        <li class="mb-2"><a href="{{ url_for('web_app.compare_countries') }}">Compare Countries</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="{{ url_for('web_app.train_model') }}">Train Model</a></li>
+                        <li class="mb-2"><a href="{{ url_for('web_app.upload_data') }}">Upload Data</a></li>
+						<li class="mb-2"><a href="{{ url_for('web_app.survey_insights_view') }}">Survey Insights</a></li>
+                        <li class="mb-2"><a href="https://github.com/hchamane/CIAT.git" target="_blank">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contact</h5>
+                    <p class="mb-2">Email: hchamane@gmail.com</p>
+                    <p class="mb-2">© 2025 CIAT - Developed by Hainadine Chamane</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Files -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.13/Recharts.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.18.13/babel.min.js"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

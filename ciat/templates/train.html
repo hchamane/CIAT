@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+
+{% block title %}CIAT - Train Model{% endblock %}
+
+{% block head_extra %}
+<style>
+    .card {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .info-box {
+        background-color: #e8f4f8;
+        border-left: 4px solid #13547a;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    
+    .step-number {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: #13547a;
+        color: white;
+        border-radius: 50%;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    
+    .data-table {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-collapse: collapse;
+    }
+    
+    .data-table th, .data-table td {
+        padding: 8px;
+        border: 1px solid #dee2e6;
+    }
+    
+    .data-table th {
+        background-color: #f8f9fa;
+    }
+    
+    .status-box {
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .status-box.trained {
+        background-color: #d4edda;
+        border-left: 4px solid #28a745;
+    }
+    
+    .status-box.untrained {
+        background-color: #f8d7da;
+        border-left: 4px solid #dc3545;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Main card container -->
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Train Cultural Impact Model</h3>
+    </div>
+    <div class="card-body">
+        <!-- About section -->
+        <div class="info-box">
+            <h5>About Model Training</h5>
+            <p>
+                The Cultural Impact Assessment Tool uses machine learning to predict project success probability
+                based on cultural dimensions and project characteristics. Training the model with historical project
+                data improves its accuracy for future assessments.
+            </p>
+            <p class="mb-0">
+                <strong>Note:</strong> Training requires project data with both cultural dimensions and success outcomes.
+                Default training data is provided, but you can upload your own for better customisation.
+            </p>
+        </div>
+        
+        <!-- Model status -->
+        <div class="status-box {% if model_trained %}trained{% else %}untrained{% endif %}">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-0">
+                        {% if model_trained %}
+                        <i class="bi bi-check-circle-fill text-success"></i> Model Status: Trained
+                        {% else %}
+                        <i class="bi bi-exclamation-triangle-fill text-danger"></i> Model Status: Not Trained
+                        {% endif %}
+                    </h5>
+                    <p class="mb-0 mt-2">
+                        {% if model_trained %}
+                        The model has been trained and is ready for predictions. You can retrain it at any time to improve accuracy.
+                        {% else %}
+                        The model has not been trained yet. Use the form below to train the model with project data.
+                        {% endif %}
+                    </p>
+                </div>
+                {% if model_trained %}
+                <a href="{{ url_for('web_app.assess_project') }}" class="btn btn-success">
+                    Start Assessing Projects
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Training steps -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0"><span class="step-number">1</span> Prepare Data</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Ensure you have project data with:</p>
+                        <ul>
+                            <li>Project characteristics</li>
+                            <li>Cultural dimensions</li>
+                            <li>Success outcomes</li>
+                        </ul>
+                        <p>Either use the default dataset or upload your own.</p>
+                        <a href="{{ url_for('web_app.upload_data') }}" class="btn btn-outline-primary">Upload Project Data</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0"><span class="step-number">2</span> Configure Training</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Choose training options:</p>
+                        <ul>
+                            <li>Select custom dataset (optional)</li>
+                            <li>Model uses default parameters</li>
+                            <li>Training takes a few moments</li>
+                        </ul>
+                        <p>The model will automatically find the optimal configuration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0"><span class="step-number">3</span> Use Model</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Once trained, you can:</p>
+                        <ul>
+                            <li>Assess new projects</li>
+                            <li>Identify cultural risks</li>
+                            <li>Get recommendations</li>
+                        </ul>
+                        <p>The model saves automatically for future use.</p>
+                        {% if model_trained %}
+                        <a href="{{ url_for('web_app.assess_project') }}" class="btn btn-outline-success">Assess Projects</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Training form and data preview -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Training Form</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data" id="trainForm">
+                            {{ form.csrf_token }}
+                            
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.dataset.label }}</label>
+                                {{ form.dataset(class="form-control") }}
+                                <div class="form-text">
+                                    Upload a custom CSV dataset or use the default dataset.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    {{ form.validate_data(class="form-check-input") }}
+                                    <label class="form-check-label">{{ form.validate_data.label }}</label>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle-fill me-2"></i>
+                                <strong>Using default dataset:</strong> If you don't upload a file,
+                                the system will use the default project dataset with 50 sample projects.
+                            </div>
+                            
+                            <div class="d-grid mt-3">
+                                {{ form.submit(class="btn btn-primary", id="trainButton") }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Training Data Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Project ID</th>
+                                        <th>Region</th>
+                                        <th>Complexity</th>
+                                        <th>Team Size</th>
+                                        <th>Power Distance</th>
+                                        <th>Success</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>PROJ-001</td>
+                                        <td>Europe</td>
+                                        <td>3</td>
+                                        <td>12</td>
+                                        <td>35</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PROJ-002</td>
+                                        <td>North America</td>
+                                        <td>4</td>
+                                        <td>8</td>
+                                        <td>40</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PROJ-003</td>
+                                        <td>Asia Pacific</td>
+                                        <td>5</td>
+                                        <td>25</td>
+                                        <td>80</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="alert alert-warning mt-3">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                            <strong>Data Requirements:</strong> For best results, ensure your dataset has at least 30 projects with both cultural dimensions and success outcomes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Model details -->
+        <div class="card mt-4">
+            <div class="card-header bg-light">
+                <h5 class="mb-0">Model Details</h5>
+            </div>
+            <div class="card-body">
+                <h6>Model Type</h6>
+                <p>Gradient Boosting Classifier with optimised hyperparameters</p>
+                
+                <h6>Features Used</h6>
+                <ul>
+                    <li><strong>Cultural Dimensions:</strong> power_distance, individualism, masculinity, uncertainty_avoidance, long_term_orientation, indulgence</li>
+                    <li><strong>Project Factors:</strong> project_complexity, technical_requirements, stakeholder_count, team_size, project_duration</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Action buttons -->
+        <div class="d-flex justify-content-center mt-4">
+            <a href="{{ url_for('web_app.index') }}" class="btn btn-outline-secondary me-2">
+                <i class="bi bi-arrow-left"></i> Return to Dashboard
+            </a>
+            <a href="{{ url_for('web_app.upload_data') }}" class="btn btn-outline-primary me-2">
+                <i class="bi bi-upload"></i> Upload Data
+            </a>
+            {% if model_trained %}
+            <a href="{{ url_for('web_app.assess_project') }}" class="btn btn-outline-success">
+                <i class="bi bi-check-circle"></i> Start Assessing
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const trainForm = document.getElementById('trainForm');
+        const trainButton = document.getElementById('trainButton');
+        
+        if (trainForm) {
+            trainForm.addEventListener('submit', function() {
+                trainButton.disabled = true;
+                trainButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Training...';
+            });
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,92 @@
+PS C:\Users\hcham\Desktop\Essex\8. MSc Computing Project\Unit 9 - 30\Application\ciat_march_new\cultural-impact-tool> python tests/test_integration.py
+CULTURAL IMPACT ASSESSMENT TOOL - INTEGRATION TEST
+============================================================
+
+1. Initializing Cultural Impact Model...
+2025-04-05 22:38:11,795 - INFO - CulturalImpactModel initialised
+   Model initialized successfully.
+
+2. Loading test data...
+   Loaded Hofstede data for 10 countries.
+   Loaded training data with 100 samples.
+   Loaded test project data.
+
+3. Testing cultural distance calculation...
+   Cultural distances between countries:
+   - United States to United Kingdom: 1.0163
+   - United States to China: 4.6386
+   - Germany to Sweden: 2.6059
+   - Japan to South Korea: 2.7517
+   - Saudi Arabia to Sweden: 3.6404
+
+4. Training the model...
+2025-04-05 22:38:11,804 - INFO - Training model with 100 samples
+2025-04-05 22:38:11,804 - INFO - Unique values in target: [0 1]
+2025-04-05 22:38:11,804 - INFO - Preprocessing data with shape: (100, 15)
+2025-04-05 22:38:11,804 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:38:11,804 - INFO - Categorical features: []
+2025-04-05 22:38:11,822 - INFO - Data preprocessing complete. Output shape: (100, 15)
+2025-04-05 22:38:11,822 - INFO - Preprocessed data shape: (100, 15)
+2025-04-05 22:38:11,822 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:38:12,002 - INFO - Validation accuracy: 0.8000
+2025-04-05 22:38:12,002 - INFO - Precision: 0.6400, Recall: 0.8000, F1: 0.7111
+2025-04-05 22:38:12,744 - INFO - Cross-validation scores: [0.8  0.75 0.85 0.9  0.75]
+2025-04-05 22:38:12,744 - INFO - Mean CV score: 0.8100, Std: 0.0583
+   Model trained successfully.
+
+5. Calculating communication impact...
+   Communication impact score: 1.0000
+
+6. Assessing regional impact...
+   Regional impact assessment:
+   - Europe: Experience Level = High, Risk Level = Low
+   - North America: Experience Level = Unknown, Risk Level = High
+   - Asia-Pacific: Experience Level = Unknown, Risk Level = High
+
+7. Identifying risk factors...
+2025-04-05 22:38:12,744 - INFO - Training model with 100 samples
+2025-04-05 22:38:12,744 - INFO - Unique values in target: [0 1]
+2025-04-05 22:38:12,744 - INFO - Preprocessing data with shape: (100, 15)
+2025-04-05 22:38:12,744 - INFO - Numerical features: ['power_distance', 'individualism', 'masculinity', 'uncertainty_avoidance', 'long_term_orientation', 'indulgence', 'project_complexity', 'technical_requirements', 'stakeholder_count', 'team_size', 'project_duration', 'virtual_team_ratio', 'language_barriers', 'communication_barriers', 'prior_collaboration']
+2025-04-05 22:38:12,760 - INFO - Categorical features: []
+2025-04-05 22:38:12,760 - INFO - Data preprocessing complete. Output shape: (100, 15)
+2025-04-05 22:38:12,764 - INFO - Preprocessed data shape: (100, 15)
+2025-04-05 22:38:12,765 - INFO - Using Gradient Boosting Classifier
+2025-04-05 22:38:12,893 - INFO - Validation accuracy: 0.8000
+2025-04-05 22:38:12,893 - INFO - Precision: 0.6400, Recall: 0.8000, F1: 0.7111
+2025-04-05 22:38:13,585 - INFO - Cross-validation scores: [0.9  0.8  0.8  0.65 0.85]
+2025-04-05 22:38:13,585 - INFO - Mean CV score: 0.8000
+   Top 5 risk factors:
+   1. num__power_distance: 0.3723
+   2. num__uncertainty_avoidance: 0.2814
+   3. num__long_term_orientation: 0.0876
+   4. num__virtual_team_ratio: 0.0772
+   5. num__indulgence: 0.0601
+
+8. Calculating project success probability...
+2025-04-05 22:38:13,585 - INFO - Making predictions for 1 instances
+   Success probability: 0.0001
+
+9. Generating recommendations...
+   Recommendations:
+   1. Provide cultural awareness training and establish cross-cultural team-building activities.
+   2. Focus on team cohesion through virtual team-building and regular check-ins.
+   3. Review and revise project plan to address cultural impact factors.
+   4. Consider bringing in cultural experts or consultants for high-risk areas.
+
+10. Testing model persistence...
+2025-04-05 22:38:13,604 - INFO - Model saved to temp/ciat_model.pkl
+   Model saved to temp/ciat_model.pkl
+2025-04-05 22:38:13,619 - INFO - CulturalImpactModel initialised
+2025-04-05 22:38:13,619 - INFO - Model loaded from temp/ciat_model.pkl
+   Model loaded successfully.
+2025-04-05 22:38:13,619 - INFO - Making predictions for 1 instances
+2025-04-05 22:38:13,619 - INFO - Making predictions for 1 instances
+   Original model prediction: 0.0001
+   Loaded model prediction: 0.0001
+
+11. Testing visualization functions...
+   Cultural dimensions visualization saved to temp/cultural_dimensions.png
+   Risk factors visualization saved to temp/risk_factors.png
+
+Integration test completed successfully!

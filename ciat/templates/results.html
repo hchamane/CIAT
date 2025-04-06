@@ -1,0 +1,820 @@
+{% extends "base.html" %}
+
+{% block title %}CIAT - Assessment Results{% endblock %}
+
+{% block head_extra %}
+<style>
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%) !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+main.container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+    margin: 0 auto !important;
+    background-color: transparent !important;
+    overflow-x: hidden !important;
+    display: block !important;
+}
+
+.page-wrapper {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background-color: transparent !important;
+}
+
+.row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 0 -10px !important;
+    width: auto !important;
+    max-width: none !important;
+    background-color: transparent !important;
+}
+
+.col-md-12, .col-md-6, .col-md-8, .col-md-4 {
+    padding: 10px !important;
+    position: relative !important;
+    background-color: transparent !important;
+    float: none !important;
+    box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .col-md-8 {
+        flex: 0 0 66.666667% !important;
+        max-width: 66.666667% !important;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .col-md-4 {
+        flex: 0 0 33.333333% !important;
+        max-width: 33.333333% !important;
+    }
+}
+
+.card {
+    margin-bottom: 20px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background-color: #fff !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
+    border: none !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.card-header {
+    padding: 15px 20px !important;
+    border-bottom: none !important;
+    position: relative !important;
+}
+
+.card-body {
+    padding: 20px !important;
+    background-color: #fff !important;
+    position: relative !important;
+}
+
+.chart-container {
+    background-color: #fff !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+    max-width: 100% !important;
+}
+
+.chart-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.recommendation-item {
+    background-color: #f0f8ff !important;
+    border-left: 4px solid #80d0c7 !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    position: relative !important;
+}
+
+img.img-fluid {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.site-footer {
+    margin-top: 50px !important;
+    padding: 20px 0 !important;
+    background: rgba(19, 84, 122, 0.8) !important;
+    position: relative !important;
+    width: 100% !important;
+    clear: both !important;
+}
+
+.action-buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 30px 0 50px 0 !important;
+    justify-content: center !important;
+}
+
+.action-buttons .btn {
+    margin: 0 10px 10px 0 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.table {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+    background-color: transparent !important;
+    border-collapse: collapse !important;
+}
+
+.table td, .table th {
+    padding: 0.75rem !important;
+    vertical-align: top !important;
+    border-top: 1px solid #dee2e6 !important;
+}
+
+.progress {
+    display: flex !important;
+    height: 8px !important;
+    overflow: hidden !important;
+    font-size: 0.75rem !important;
+    background-color: #e9ecef !important;
+    border-radius: 0.25rem !important;
+}
+
+.progress-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    color: #fff !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    background-color: #13547a !important;
+    transition: width 0.6s ease !important;
+}
+
+@media (max-width: 767px) {
+    .col-md-6, .col-md-4, .col-md-8 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+.badge {
+    display: inline-block !important;
+    padding: 0.25em 0.4em !important;
+    font-size: 75% !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+    border-radius: 0.25rem !important;
+}
+
+.success-high {
+    color: #28a745 !important;
+}
+
+.success-medium {
+    color: #ffc107 !important;
+}
+
+.success-low {
+    color: #dc3545 !important;
+}
+
+* {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+    <div class="col-md-12">
+        <!-- Executive Summary Card -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h1 class="h3 mb-0">Cultural Impact Assessment Results</h1>
+                <span class="badge bg-white text-primary">{{ now().strftime("%d %b %Y") }}</span>
+            </div>
+            <div class="card-body">
+                <div class="executive-summary">
+                    <h5>Executive Summary</h5>
+                    <p>
+                        Project <strong>{{ project.project_name }}</strong> has a 
+                        <span class="{% if success_prob > 0.7 %}success-high{% elif success_prob > 0.5 %}success-medium{% else %}success-low{% endif %}">
+                            <strong>{{ (success_prob * 100)|round(1) }}%</strong>
+                        </span> 
+                        estimated success probability based on cultural and project factors. 
+                        {% if comm_impact > 0.66 %}
+                            Communication barriers present a high risk factor that should be addressed.
+                        {% elif comm_impact > 0.33 %}
+                            Communication barriers present a medium-level concern.
+                        {% else %}
+                            Communication barriers present a minimal concern.
+                        {% endif %}
+                        {% for region, info in regional_impact.items() %}
+                            The primary region ({{ region }}) has a {{ info.risk_level|lower }} cultural risk profile.
+                        {% endfor %}
+                    </p>
+                </div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-light">
+                                <h4 class="h5 mb-0">Project Details</h4>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-sm">
+                                    <tr>
+                                        <th>Project Type:</th>
+                                        <td>{{ project.project_type|replace('_', ' ')|title }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Industry Sector:</th>
+                                        <td>{{ project.industry_sector|replace('_', ' ')|title }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Primary Region:</th>
+                                        <td>{{ project.primary_region }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Project Complexity:</th>
+                                        <td>{{ project.project_complexity }} / 5</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Team Size:</th>
+                                        <td>{{ project.team_size }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Project Duration:</th>
+                                        <td>{{ project.project_duration }} months</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Virtual Team Ratio:</th>
+                                        <td>{{ project.virtual_team_ratio }}%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Team Diversity:</th>
+                                        <td>{{ project.team_diversity|title }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-light">
+                                <h4 class="h5 mb-0">Cultural Dimensions</h4>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-sm dimension-table">
+                                    <tr>
+                                        <th>Power Distance:</th>
+                                        <td>
+                                            {{ project.power_distance|round(1) }}
+                                            <div class="progress mt-1" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: {{ project.power_distance }}%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Individualism:</th>
+                                        <td>
+                                            {{ project.individualism|round(1) }}
+                                            <div class="progress mt-1" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: {{ project.individualism }}%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Masculinity:</th>
+                                        <td>
+                                            {{ project.masculinity|round(1) }}
+                                            <div class="progress mt-1" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: {{ project.masculinity }}%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Uncertainty Avoidance:</th>
+                                        <td>
+                                            {{ project.uncertainty_avoidance|round(1) }}
+                                            <div class="progress mt-1" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: {{ project.uncertainty_avoidance }}%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Long-term Orientation:</th>
+                                        <td>
+                                            {{ project.long_term_orientation|round(1) }}
+                                            <div class="progress mt-1" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: {{ project.long_term_orientation }}%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Indulgence:</th>
+                                        <td>
+                                            {{ project.indulgence|round(1) }}
+                                            <div class="progress mt-1" style="height: 5px;">
+                                                <div class="progress-bar" role="progressbar" style="width: {{ project.indulgence }}%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="small text-muted mt-2">
+                                    <p>Cultural dimensions based on Hofstede's framework, averaged across selected countries.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Metrics Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Success Probability</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        {% if plots.success_gauge %}
+                            <div class="chart-container">
+                                <img src="data:image/png;base64,{{ plots.success_gauge }}" alt="Success Probability" class="img-fluid">
+                            </div>
+                        {% endif %}
+                        
+                        <div class="metric-container text-center">
+                            <div class="metric-value {% if success_prob > 0.7 %}success-high{% elif success_prob > 0.5 %}success-medium{% else %}success-low{% endif %}">
+                                {{ (success_prob * 100)|round(1) }}%
+                            </div>
+                            <p>Estimated success probability based on cultural and project factors.</p>
+                            <div class="interpretation small">
+                                <p class="mb-0">
+                                    {% if success_prob > 0.7 %}
+                                        <strong>High probability:</strong> Project has favorable cultural alignment.
+                                    {% elif success_prob > 0.5 %}
+                                        <strong>Medium probability:</strong> Project has some cultural challenges to address.
+                                    {% else %}
+                                        <strong>Low probability:</strong> Significant cultural barriers may impact success.
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-warning text-dark">
+                        <h4 class="mb-0">Risk Factors</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if plots.risk_factors %}
+                            <div class="chart-container">
+                                <img src="data:image/png;base64,{{ plots.risk_factors }}" alt="Risk Factors" class="img-fluid">
+                            </div>
+                        {% else %}
+                            <ul class="list-group">
+                                {% for factor, score in risk_factors.items() %}
+                                    {% if loop.index <= 5 %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {{ factor }}
+                                            <span class="badge bg-warning text-dark">{{ (score * 100)|round(1) }}%</span>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        
+						<div class="interpretation small mt-3">
+							<p class="mb-0">
+								<strong>Primary Risk Factors:</strong> 
+								{% if risk_factors %}
+									{% set top_risks = [] %}
+									{% for factor, score in risk_factors.items()|sort(reverse=True, attribute='1') %}
+										{% if loop.index <= 3 %}
+											{% set _ = top_risks.append(factor|replace('_', ' ')|title) %}
+										{% endif %}
+									{% endfor %}
+									
+									{% if top_risks %}
+										{{ top_risks|join(', ') }}
+									{% else %}
+										Based on the chart: Masculinity, Uncertainty Avoidance, Stakeholder Count
+									{% endif %}
+								{% else %}
+									Based on the chart: Masculinity, Uncertainty Avoidance, Stakeholder Count
+								{% endif %}
+							</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cultural & Communication Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="mb-0">Cultural Dimensions</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if plots.cultural_dimensions %}
+                            <div class="chart-container">
+                                <img src="data:image/png;base64,{{ plots.cultural_dimensions }}" alt="Cultural Dimensions" class="img-fluid">
+                            </div>
+                        {% endif %}
+                        
+                        <div class="mt-3">
+                            <h5>Countries Involved:</h5>
+                            <div class="row">
+                                {% for country in countries %}
+                                    <div class="col-md-4 mb-2">
+                                        <span class="badge bg-light text-dark p-2 w-100">{{ country }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="small text-muted mt-3">
+                                <p>The radar chart visualises the cultural dimensions across all countries involved in the project. Larger differences indicate potential areas of conflict or misunderstanding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">
+                        <h4 class="mb-0">Communication Impact</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if plots.communication_impact %}
+                            <div class="chart-container">
+                                <img src="data:image/png;base64,{{ plots.communication_impact }}" alt="Communication Impact" class="img-fluid">
+                            </div>
+                        {% endif %}
+                        
+                        <div class="metric-container text-center">
+                            <div class="metric-value">
+                                {% if comm_impact < 0.33 %}
+                                    <span class="success-high">Low Impact</span>
+                                {% elif comm_impact < 0.66 %}
+                                    <span class="success-medium">Medium Impact</span>
+                                {% else %}
+                                    <span class="success-low">High Impact</span>
+                                {% endif %}
+                            </div>
+                            <p>Communication barriers impact level: {{ (comm_impact * 100)|round(1) }}%</p>
+                            
+                            <div class="additional-metrics row text-center mt-3">
+                                <div class="col-4">
+                                    <div class="small text-muted">Language Barriers</div>
+                                    <div class="h5">{{ project.language_barriers }}/5</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="small text-muted">Virtual Team</div>
+                                    <div class="h5">{{ project.virtual_team_ratio }}%</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="small text-muted">Prior Collaboration</div>
+                                    <div class="h5">{{ project.prior_collaboration }}/5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recommendations & Regional Insights Row -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Recommendations & Regional Insights</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-{% if plots.regional_focus %}8{% else %}12{% endif %}">
+                        <h5>Cultural Impact Mitigation Strategies:</h5>
+                        <div class="recommendations">
+                            {% for rec in recommendations %}
+                                <div class="recommendation-item">
+                                    {{ rec }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="card mt-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Implementation Priority</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Based on the assessment results, focus on implementing these recommendations in the following order:</p>
+                                <ol>
+                                    {% for rec in recommendations %}
+                                        {% if loop.index <= 3 %}
+                                            <li class="mb-2"><strong>{{ rec }}</strong></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% if plots.regional_focus %}
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">Regional Experience</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container mb-3">
+                                        <img src="data:image/png;base64,{{ plots.regional_focus }}" alt="Regional Focus" class="img-fluid">
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        {% for region, info in regional_impact.items() %}
+                                            <div class="card mb-3">
+                                                <div class="card-header bg-light">
+                                                    <h6 class="mb-0">{{ region }} Risk Profile</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="small text-muted">Experience Level</div>
+                                                            <div class="h5">
+                                                                {% if info.experience_level == 'High' %}
+                                                                    <span class="success-high">{{ info.experience_level }}</span>
+                                                                {% elif info.experience_level == 'Medium' %}
+                                                                    <span class="success-medium">{{ info.experience_level }}</span>
+                                                                {% else %}
+                                                                    <span class="success-low">{{ info.experience_level }}</span>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="small text-muted">Risk Level</div>
+                                                            <div class="h5">
+                                                                {% if info.risk_level == 'Low' %}
+                                                                    <span class="success-high">{{ info.risk_level }}</span>
+                                                                {% elif info.risk_level == 'Medium' %}
+                                                                    <span class="success-medium">{{ info.risk_level }}</span>
+                                                                {% else %}
+                                                                    <span class="success-low">{{ info.risk_level }}</span>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-2" style="height: 8px;">
+                                                        <div class="progress-bar" role="progressbar" 
+                                                            style="width: {{ info.focus_value * 100 }}%" 
+                                                            aria-valuenow="{{ info.focus_value * 100 }}" 
+                                                            aria-valuemin="0" 
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="small text-muted text-center mt-1">
+                                                        Regional Focus: {{ (info.focus_value * 100)|round(1) }}%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons text-center">
+            <a href="{{ url_for('web_app.assess_project') }}" class="btn btn-outline-primary me-2">
+                <i class="bi bi-arrow-left"></i> New Assessment
+            </a>
+            <a href="{{ url_for('web_app.compare_countries') }}" class="btn btn-outline-success me-2">
+                <i class="bi bi-globe"></i> Compare Countries
+            </a>
+            <a href="#" class="btn btn-outline-info me-2" onclick="window.print()">
+                <i class="bi bi-printer"></i> Print Results
+            </a>
+            <a href="{{ url_for('web_app.index') }}" class="btn btn-outline-secondary">
+                <i class="bi bi-house"></i> Return to Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- PDF Export Script (uses html2pdf.js)
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>  -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Force proper layout
+    enforceLayout();
+    
+    // Listen for window resize and reapply layout fixes
+    window.addEventListener('resize', enforceLayout);
+    
+    // Add a small delay to ensure all content is loaded
+    setTimeout(enforceLayout, 500);
+});
+
+function enforceLayout() {
+    // Fix body to prevent horizontal scrolling
+    document.body.style.overflowX = 'hidden';
+    document.body.style.width = '100%';
+    document.body.style.maxWidth = '100vw';
+    document.body.style.backgroundImage = 'linear-gradient(15deg, #13547a 0%, #80d0c7 100%)';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    
+    // Fix main container
+    const mainContainer = document.querySelector('main.container');
+    if (mainContainer) {
+        mainContainer.style.width = '100%';
+        mainContainer.style.maxWidth = '100%';
+        mainContainer.style.padding = '0 20px';
+        mainContainer.style.margin = '0 auto';
+        mainContainer.style.backgroundColor = 'transparent';
+        mainContainer.style.overflowX = 'hidden';
+    }
+    
+    // Fix the wrapper
+    const pageWrapper = document.querySelector('.page-wrapper');
+    if (pageWrapper) {
+        pageWrapper.style.width = '100%';
+        pageWrapper.style.maxWidth = '1200px';
+        pageWrapper.style.margin = '0 auto';
+        pageWrapper.style.padding = '0';
+        pageWrapper.style.overflow = 'hidden';
+        pageWrapper.style.backgroundColor = 'transparent';
+    }
+    
+    // Fix all rows
+    document.querySelectorAll('.row').forEach(function(row) {
+        row.style.display = 'flex';
+        row.style.flexWrap = 'wrap';
+        row.style.margin = '0 -10px';
+        row.style.width = 'auto';
+        row.style.maxWidth = 'none';
+        row.style.backgroundColor = 'transparent';
+    });
+    
+    // Fix all columns
+    const width = window.innerWidth;
+    document.querySelectorAll('.col-md-12, .col-md-6, .col-md-8, .col-md-4').forEach(function(col) {
+        col.style.padding = '10px';
+        col.style.backgroundColor = 'transparent';
+        col.style.boxSizing = 'border-box';
+        
+        // Handle responsive layout
+        if (width >= 768) {
+            if (col.classList.contains('col-md-12')) {
+                col.style.flex = '0 0 100%';
+                col.style.maxWidth = '100%';
+            } else if (col.classList.contains('col-md-8')) {
+                col.style.flex = '0 0 66.666667%';
+                col.style.maxWidth = '66.666667%';
+            } else if (col.classList.contains('col-md-6')) {
+                col.style.flex = '0 0 50%';
+                col.style.maxWidth = '50%';
+            } else if (col.classList.contains('col-md-4')) {
+                col.style.flex = '0 0 33.333333%';
+                col.style.maxWidth = '33.333333%';
+            }
+        } else {
+            col.style.flex = '0 0 100%';
+            col.style.maxWidth = '100%';
+        }
+    });
+    
+    // Fix all cards
+    document.querySelectorAll('.card').forEach(function(card) {
+        card.style.marginBottom = '20px';
+        card.style.borderRadius = '16px';
+        card.style.overflow = 'hidden';
+        card.style.backgroundColor = '#fff';
+        card.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.08)';
+        card.style.border = 'none';
+        card.style.width = '100%';
+        card.style.display = 'block';
+    });
+    
+    // Fix all card headers
+    document.querySelectorAll('.card-header').forEach(function(header) {
+        header.style.padding = '15px 20px';
+        header.style.borderBottom = 'none';
+    });
+    
+    // Fix all card bodies
+    document.querySelectorAll('.card-body').forEach(function(body) {
+        body.style.padding = '20px';
+        body.style.backgroundColor = '#fff';
+    });
+    
+    // Fix all chart containers
+    document.querySelectorAll('.chart-container').forEach(function(container) {
+        container.style.backgroundColor = '#fff';
+        container.style.padding = '10px';
+        container.style.borderRadius = '8px';
+        container.style.marginBottom = '15px';
+        container.style.overflow = 'hidden';
+        container.style.maxWidth = '100%';
+    });
+    
+    // Fix all images
+    document.querySelectorAll('img').forEach(function(img) {
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+    });
+    
+    // Fix all recommendation items
+    document.querySelectorAll('.recommendation-item').forEach(function(item) {
+        item.style.backgroundColor = '#f0f8ff';
+        item.style.borderLeft = '4px solid #80d0c7';
+        item.style.padding = '15px';
+        item.style.marginBottom = '15px';
+    });
+    
+    // Fix the footer
+    const footer = document.querySelector('.site-footer');
+    if (footer) {
+        footer.style.marginTop = '50px';
+        footer.style.padding = '20px 0';
+        footer.style.background = 'rgba(19, 84, 122, 0.8)';
+        footer.style.position = 'relative';
+        footer.style.width = '100%';
+        footer.style.clear = 'both';
+    }
+    
+    // Fix action buttons
+    const actionButtons = document.querySelector('.action-buttons');
+    if (actionButtons) {
+        actionButtons.style.display = 'flex';
+        actionButtons.style.flexWrap = 'wrap';
+        actionButtons.style.margin = '30px 0 50px 0';
+        actionButtons.style.justifyContent = 'center';
+    }
+    
+    // Fix all buttons in the action bar
+    document.querySelectorAll('.action-buttons .btn').forEach(function(btn) {
+        btn.style.margin = '0 10px 10px 0';
+        btn.style.color = '#fff';
+        btn.style.borderColor = '#fff';
+    });
+    
+    // Find and fix any elements that are too wide
+    document.querySelectorAll('*').forEach(function(el) {
+        if (el.offsetWidth > window.innerWidth) {
+            el.style.maxWidth = '100%';
+            el.style.overflowX = 'hidden';
+        }
+    });
+    
+    console.log('Comprehensive layout fixes applied');
+}
+</script>
+{% endblock %}

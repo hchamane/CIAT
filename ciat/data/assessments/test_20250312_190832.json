@@ -1,0 +1,48 @@
+{
+  "project_data": {
+    "project_name": "Test",
+    "project_type": "software_development",
+    "industry_sector": "technology",
+    "technical_requirements": 3,
+    "stakeholder_count": 10,
+    "project_complexity": 3,
+    "team_size": 5,
+    "project_duration": 6,
+    "team_diversity": "low",
+    "virtual_team_ratio": 50,
+    "language_barriers": 2,
+    "communication_barriers": 2,
+    "prior_collaboration": 3,
+    "primary_region": "Europe",
+    "power_distance": 35.0,
+    "individualism": 89.0,
+    "masculinity": 66.0,
+    "uncertainty_avoidance": 35.0,
+    "long_term_orientation": 51.0,
+    "indulgence": 69.0
+  },
+  "assessment_results": {
+    "success_probability": 0.65,
+    "risk_factors": {
+      "communication_barriers": 0.25,
+      "technical_complexity": 0.2,
+      "stakeholder_count": 0.15,
+      "uncertainty_avoidance": 0.1,
+      "power_distance": 0.1
+    },
+    "communication_impact": 0.4,
+    "regional_impact": {
+      "Europe": {
+        "focus_value": 0.5714,
+        "experience_level": "Medium",
+        "risk_level": "Medium"
+      }
+    },
+    "recommendations": [
+      "Improve communication protocols and channels.",
+      "Focus on cultural awareness training for team members.",
+      "Establish regular progress reviews and feedback sessions."
+    ]
+  },
+  "timestamp": "2025-03-12T19:08:32.110945"
+}

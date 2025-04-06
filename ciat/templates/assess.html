@@ -1,0 +1,388 @@
+{% extends "base.html" %}
+
+{% block title %}CIAT - Project Assessment{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h3 mb-0">Project Cultural Impact Assessment</h1>
+            </div>
+            <div class="card-body">
+                <p class="lead mb-4">
+                    Complete the form below to assess the cultural impact on your international project.
+                    Provide detailed information to receive a comprehensive analysis.
+                </p>
+                
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <form method="POST" class="mt-4 needs-validation" novalidate>
+                    {{ form.csrf_token }}
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <h4 class="border-bottom pb-2">Project Information</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.project_name.label(class="form-label") }}
+                                {{ form.project_name(class="form-control", required=true, **{"aria-describedby": "project-name-help"}) }}
+                                <small id="project-name-help" class="form-text text-muted">
+                                    Enter the full name of your project
+                                </small>
+                                {% if form.project_name.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.project_name.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.project_type.label(class="form-label") }}
+                                {{ form.project_type(class="form-select", required=true) }}
+                                {% if form.project_type.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.project_type.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.industry_sector.label(class="form-label") }}
+                                {{ form.industry_sector(class="form-select", required=true) }}
+                                {% if form.industry_sector.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.industry_sector.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.primary_region.label(class="form-label", **{"data-bs-toggle": "tooltip", "title": "Select the primary region where the project is based"}) }}
+                                {{ form.primary_region(class="form-select", required=true) }}
+                                {% if form.primary_region.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.primary_region.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <div class="form-group" id="countries-container">
+                                {{ form.countries.label(class="form-label") }}
+                                <div class="row g-2">
+                                    {% for country in form.countries.choices %}
+                                        <div class="col-md-4 col-lg-3 col-sm-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" 
+                                                       name="countries" 
+                                                       value="{{ country[0] }}" 
+                                                       id="country_{{ country[0]|replace(' ', '_') }}">
+                                                <label class="form-check-label" for="country_{{ country[0]|replace(' ', '_') }}">
+                                                    {{ country[0] }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select at least one country involved in the project
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <h4 class="border-bottom pb-2">Project Complexity</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.project_complexity.label(class="form-label") }}
+                                {{ form.project_complexity(class="form-range", type="range", min="1", max="5", required=true, oninput="this.nextElementSibling.value = this.value") }}
+                                <output>3</output>
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>Low Complexity</span>
+                                    <span>High Complexity</span>
+                                </div>
+                                {% if form.project_complexity.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.project_complexity.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.technical_requirements.label(class="form-label") }}
+                                {{ form.technical_requirements(class="form-range", type="range", min="1", max="5", required=true, oninput="this.nextElementSibling.value = this.value") }}
+                                <output>3</output>
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>Low Requirements</span>
+                                    <span>High Requirements</span>
+                                </div>
+                                {% if form.technical_requirements.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.technical_requirements.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.stakeholder_count.label(class="form-label") }}
+                                {{ form.stakeholder_count(class="form-control", required=true, type="number", min="1") }}
+                                {% if form.stakeholder_count.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.stakeholder_count.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <h4 class="border-bottom pb-2">Team Composition</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.team_size.label(class="form-label") }}
+                                {{ form.team_size(class="form-control", required=true, type="number", min="1") }}
+                                {% if form.team_size.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.team_size.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.project_duration.label(class="form-label") }}
+                                {{ form.project_duration(class="form-control", required=true, type="number", min="1") }}
+                                {% if form.project_duration.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.project_duration.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.team_diversity.label(class="form-label") }}
+                                {{ form.team_diversity(class="form-select", required=true) }}
+                                {% if form.team_diversity.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.team_diversity.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <h4 class="border-bottom pb-2">Communication & Collaboration</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.virtual_team_ratio.label(class="form-label") }}
+                                {{ form.virtual_team_ratio(class="form-range", type="range", min="0", max="100", required=true, oninput="this.nextElementSibling.value = this.value + '%'") }}
+                                <output>50%</output>
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>0% (All in-person)</span>
+                                    <span>100% (All virtual)</span>
+                                </div>
+                                {% if form.virtual_team_ratio.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.virtual_team_ratio.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.language_barriers.label(class="form-label") }}
+                                {{ form.language_barriers(class="form-range", type="range", min="1", max="5", required=true, oninput="this.nextElementSibling.value = this.value") }}
+                                <output>2</output>
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>Low Barriers</span>
+                                    <span>High Barriers</span>
+                                </div>
+                                {% if form.language_barriers.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.language_barriers.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {{ form.communication_barriers.label(class="form-label") }}
+                                {{ form.communication_barriers(class="form-range", type="range", min="1", max="5", required=true, oninput="this.nextElementSibling.value = this.value") }}
+                                <output>2</output>
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>Low Barriers</span>
+                                    <span>High Barriers</span>
+                                </div>
+                                {% if form.communication_barriers.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.communication_barriers.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.prior_collaboration.label(class="form-label") }}
+                                {{ form.prior_collaboration(class="form-range", type="range", min="1", max="5", required=true, oninput="this.nextElementSibling.value = this.value") }}
+                                <output>3</output>
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>Low Collaboration</span>
+                                    <span>High Collaboration</span>
+                                </div>
+                                {% if form.prior_collaboration.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for error in form.prior_collaboration.errors %}
+                                            {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                            {{ form.submit(class="btn btn-primary btn-lg px-5 shadow") }}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Form validation
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        
+        form.classList.add('was-validated');
+    }, false);
+
+    // Range input live update
+    const rangeInputs = document.querySelectorAll('input[type="range"]');
+    rangeInputs.forEach(function(input) {
+        // Set initial value
+        const output = input.nextElementSibling;
+        if (output && output.tagName.toLowerCase() === 'output') {
+            if (input.id === 'virtual_team_ratio') {
+                output.value = input.value + '%';
+            } else {
+                output.value = input.value;
+            }
+        }
+        
+        // Add event listener for input changes
+        input.addEventListener('input', function() {
+            const output = this.nextElementSibling;
+            if (output && output.tagName.toLowerCase() === 'output') {
+                if (this.id === 'virtual_team_ratio') {
+                    output.value = this.value + '%';
+                } else {
+                    output.value = this.value;
+                }
+            }
+        });
+    });
+    
+    // Initialise tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Countries validation - ensure at least one is selected
+    const countryCheckboxes = document.querySelectorAll('input[name="countries"]');
+    const countryContainer = document.getElementById('countries-container');
+    
+    form.addEventListener('submit', function(event) {
+        const checkedCountries = document.querySelectorAll('input[name="countries"]:checked');
+        if (checkedCountries.length === 0) {
+            event.preventDefault();
+            event.stopPropagation();
+            countryContainer.classList.add('was-validated');
+        }
+    });
+});
+</script>
+{% endblock %}

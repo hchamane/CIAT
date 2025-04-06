@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}CIAT - Survey Insights{% endblock %}
+
+{% block head_extra %}
+<!-- Add any additional CSS for survey insights -->
+<style>
+    .stat-card {
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: transform 0.3s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .stat-value {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+    .chart-card {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+    }
+    
+    .chart-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .chart-content {
+        padding: 20px;
+        min-height: 300px;
+    }
+    
+    .nav-tabs .nav-link {
+        border-radius: 0;
+        padding: 10px 15px;
+    }
+    
+    .nav-tabs .nav-link.active {
+        font-weight: 600;
+        border-bottom: 3px solid #13547a;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h3 mb-0">Survey Insights</h1>
+            </div>
+            <div class="card-body">
+                <p class="lead">
+                    Analysis of survey responses from {{ survey.response_count }} project management professionals
+                    working on international projects across various industries and regions.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="stat-card" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); color: white;">
+            <div class="stat-label">Survey Respondents</div>
+            <div class="stat-value">{{ survey.response_count }}</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stat-card" style="background-image: linear-gradient(15deg, #FF6B6B 0%, #FFE66D 100%); color: white;">
+            <div class="stat-label">Top Region</div>
+            <div class="stat-value">{{ survey.top_region }}</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stat-card" style="background-image: linear-gradient(15deg, #845EC2 0%, #D65DB1 100%); color: white;">
+            <div class="stat-label">Top Complexity Factor</div>
+            <div class="stat-value">{{ survey.top_complexity }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="chart-card">
+            <div class="chart-header bg-info text-white">
+                <h5 class="mb-0">Regional Focus</h5>
+            </div>
+            <div class="chart-content">
+                {% if plots.regions %}
+                <img src="data:image/png;base64,{{ plots.regions }}" alt="Regional Distribution" class="img-fluid">
+                {% else %}
+                <div class="alert alert-warning">Chart not available</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="chart-card">
+            <div class="chart-header bg-success text-white">
+                <h5 class="mb-0">Experience Levels</h5>
+            </div>
+            <div class="chart-content">
+                {% if plots.experience_levels %}
+                <img src="data:image/png;base64,{{ plots.experience_levels }}" alt="Experience Levels" class="img-fluid">
+                {% else %}
+                <div class="alert alert-warning">Chart not available</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="chart-card">
+            <div class="chart-header bg-warning text-dark">
+                <h5 class="mb-0">Communication Challenges</h5>
+            </div>
+            <div class="chart-content">
+                {% if plots.communication_challenges %}
+                <img src="data:image/png;base64,{{ plots.communication_challenges }}" alt="Communication Challenges" class="img-fluid">
+                {% else %}
+                <div class="alert alert-warning">Chart not available</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="chart-card">
+            <div class="chart-header" style="background-color: #845EC2; color: white;">
+                <h5 class="mb-0">Industry Sectors</h5>
+            </div>
+            <div class="chart-content">
+                {% if plots.industry_sectors %}
+                <img src="data:image/png;base64,{{ plots.industry_sectors }}" alt="Industry Sectors" class="img-fluid">
+                {% else %}
+                <div class="alert alert-warning">Chart not available</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="chart-card">
+            <div class="chart-header" style="background-color: #FF6B6B; color: white;">
+                <h5 class="mb-0">Project Complexity Factors</h5>
+            </div>
+            <div class="chart-content">
+                {% if plots.complexity_factors %}
+                <img src="data:image/png;base64,{{ plots.complexity_factors }}" alt="Complexity Factors" class="img-fluid">
+                {% else %}
+                <div class="alert alert-warning">Chart not available</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add any JavaScript for the survey insights page
+        const statCards = document.querySelectorAll('.stat-card');
+        
+        statCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+    });
+</script>
+{% endblock %}

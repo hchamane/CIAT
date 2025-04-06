@@ -1,0 +1,1210 @@
+project_id,project_name,primary_region,project_complexity,technical_requirements,stakeholder_count,team_size,project_duration,virtual_team_ratio,language_barriers,communication_barriers,prior_collaboration,team_diversity,industry_sector,primary_country,power_distance,individualism,masculinity,uncertainty_avoidance,long_term_orientation,indulgence,project_success,schedule_variance,budget_performance,stakeholder_satisfaction,quality_metrics,team_performance
+PROJ-001,Project 1,North America,5.0,2,32,19,31.0,37.0,5,1,4.0,Low,Technology,9,"9   NaN
+9   NaN
+Name: power_distance, dtype: float64","9   NaN
+9   NaN
+Name: individualism, dtype: float64","9   NaN
+9   NaN
+Name: masculinity, dtype: float64","9   NaN
+9   NaN
+Name: uncertainty_avoidance, dtype: float64","9   NaN
+9   NaN
+Name: long_term_orientation, dtype: float64","9   NaN
+9   NaN
+Name: indulgence, dtype: float64",1,0.7444688400997838,1.0,1.0,1.0,0.9749241622043529
+PROJ-002,Project 2,South America,1.0,2,37,26,15.0,5.0,5,2,1.0,Medium,Technology,20,"20   NaN
+20   NaN
+Name: power_distance, dtype: float64","20   NaN
+20   NaN
+Name: individualism, dtype: float64","20   NaN
+20   NaN
+Name: masculinity, dtype: float64","20   NaN
+20   NaN
+Name: uncertainty_avoidance, dtype: float64","20   NaN
+20   NaN
+Name: long_term_orientation, dtype: float64","20   NaN
+20   NaN
+Name: indulgence, dtype: float64",1,0.6938713099605986,1.0,1.0,1.0,0.8794017073541134
+PROJ-003,Project 3,Asia Pacific,1.0,4,9,21,14.0,57.0,3,5,2.0,High,Healthcare,6,"6   NaN
+6   NaN
+Name: power_distance, dtype: float64","6   NaN
+6   NaN
+Name: individualism, dtype: float64","6   NaN
+6   NaN
+Name: masculinity, dtype: float64","6   NaN
+6   NaN
+Name: uncertainty_avoidance, dtype: float64","6   NaN
+6   NaN
+Name: long_term_orientation, dtype: float64","6   NaN
+6   NaN
+Name: indulgence, dtype: float64",1,0.6821503036403659,0.8593715371416719,0.9594100162504944,0.9324013727025604,0.8457537346148231
+PROJ-004,Project 4,South America,1.0,5,23,30,33.0,43.0,5,3,5.0,High,Technology,Italy,50.0,76.0,70.0,75.0,61.0,30.0,1,0.523315503552914,0.94473720050938,1.0,1.0,0.6806403089679005
+PROJ-005,Project 5,South America,1.0,1,8,28,4.0,44.0,5,1,3.0,High,Technology,13,"13   NaN
+13   NaN
+Name: power_distance, dtype: float64","13   NaN
+13   NaN
+Name: individualism, dtype: float64","13   NaN
+13   NaN
+Name: masculinity, dtype: float64","13   NaN
+13   NaN
+Name: uncertainty_avoidance, dtype: float64","13   NaN
+13   NaN
+Name: long_term_orientation, dtype: float64","13   NaN
+13   NaN
+Name: indulgence, dtype: float64",1,0.5594466993400111,1.0,1.0,0.8443993267226317,0.8935238161399628
+PROJ-006,Project 6,Africa,4.0,1,39,25,25.0,31.0,5,2,4.0,High,Healthcare,26,"26   NaN
+26   NaN
+Name: power_distance, dtype: float64","26   NaN
+26   NaN
+Name: individualism, dtype: float64","26   NaN
+26   NaN
+Name: masculinity, dtype: float64","26   NaN
+26   NaN
+Name: uncertainty_avoidance, dtype: float64","26   NaN
+26   NaN
+Name: long_term_orientation, dtype: float64","26   NaN
+26   NaN
+Name: indulgence, dtype: float64",1,0.9428203037530896,0.9700490861827792,1.0,0.8178095267347646,0.7506229422251501
+PROJ-007,Project 7,Asia Pacific,3.0,3,21,28,19.0,44.0,5,1,5.0,Medium,Healthcare,15,"15   NaN
+15   NaN
+Name: power_distance, dtype: float64","15   NaN
+15   NaN
+Name: individualism, dtype: float64","15   NaN
+15   NaN
+Name: masculinity, dtype: float64","15   NaN
+15   NaN
+Name: uncertainty_avoidance, dtype: float64","15   NaN
+15   NaN
+Name: long_term_orientation, dtype: float64","15   NaN
+15   NaN
+Name: indulgence, dtype: float64",1,0.882273251330763,0.8081325242968183,0.8174042716205481,0.7664427275833372,0.6805560241994301
+PROJ-008,Project 8,Asia Pacific,3.0,2,48,7,28.0,60.0,2,1,3.0,High,Other,21,"21   NaN
+21   NaN
+Name: power_distance, dtype: float64","21   NaN
+21   NaN
+Name: individualism, dtype: float64","21   NaN
+21   NaN
+Name: masculinity, dtype: float64","21   NaN
+21   NaN
+Name: uncertainty_avoidance, dtype: float64","21   NaN
+21   NaN
+Name: long_term_orientation, dtype: float64","21   NaN
+21   NaN
+Name: indulgence, dtype: float64",1,0.8113126882785697,0.9342227239444312,0.9276929807757676,0.9500702760428004,0.8512843613079378
+PROJ-009,Project 9,Asia Pacific,1.0,5,32,28,10.0,46.0,2,3,3.0,High,Technology,59,"59   NaN
+59   NaN
+Name: power_distance, dtype: float64","59   NaN
+59   NaN
+Name: individualism, dtype: float64","59   NaN
+59   NaN
+Name: masculinity, dtype: float64","59   NaN
+59   NaN
+Name: uncertainty_avoidance, dtype: float64","59   NaN
+59   NaN
+Name: long_term_orientation, dtype: float64","59   NaN
+59   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1322410787886692
+PROJ-010,Project 10,South America,3.0,4,34,23,31.0,20.0,3,5,1.0,Low,Technology,54,"54   NaN
+54   NaN
+Name: power_distance, dtype: float64","54   NaN
+54   NaN
+Name: individualism, dtype: float64","54   NaN
+54   NaN
+Name: masculinity, dtype: float64","54   NaN
+54   NaN
+Name: uncertainty_avoidance, dtype: float64","54   NaN
+54   NaN
+Name: long_term_orientation, dtype: float64","54   NaN
+54   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1447551707574083
+PROJ-011,Project 11,North America,3.0,2,33,25,28.0,79.0,1,1,2.0,High,Other,63,"63   NaN
+63   NaN
+Name: power_distance, dtype: float64","63   NaN
+63   NaN
+Name: individualism, dtype: float64","63   NaN
+63   NaN
+Name: masculinity, dtype: float64","63   NaN
+63   NaN
+Name: uncertainty_avoidance, dtype: float64","63   NaN
+63   NaN
+Name: long_term_orientation, dtype: float64","63   NaN
+63   NaN
+Name: indulgence, dtype: float64",0,0.9514965681570688,0.2,0.3,0.25,0.1597976817706218
+PROJ-012,Project 12,Asia Pacific,1.0,4,50,11,12.0,84.0,5,2,2.0,Medium,Finance,45,"45   NaN
+45   NaN
+Name: power_distance, dtype: float64","45   NaN
+45   NaN
+Name: individualism, dtype: float64","45   NaN
+45   NaN
+Name: masculinity, dtype: float64","45   NaN
+45   NaN
+Name: uncertainty_avoidance, dtype: float64","45   NaN
+45   NaN
+Name: long_term_orientation, dtype: float64","45   NaN
+45   NaN
+Name: indulgence, dtype: float64",1,0.7071405327721526,0.885482257596462,0.8334942842362822,1.0,1.0
+PROJ-013,Project 13,Middle East,3.0,3,10,14,28.0,74.0,1,4,5.0,Medium,Finance,2,"2   NaN
+2   NaN
+Name: power_distance, dtype: float64","2   NaN
+2   NaN
+Name: individualism, dtype: float64","2   NaN
+2   NaN
+Name: masculinity, dtype: float64","2   NaN
+2   NaN
+Name: uncertainty_avoidance, dtype: float64","2   NaN
+2   NaN
+Name: long_term_orientation, dtype: float64","2   NaN
+2   NaN
+Name: indulgence, dtype: float64",1,0.4791237432938486,1.0,1.0,1.0,0.7313084244207513
+PROJ-014,Project 14,South America,5.0,3,39,23,36.0,100.0,1,1,2.0,Medium,Finance,26,"26   NaN
+26   NaN
+Name: power_distance, dtype: float64","26   NaN
+26   NaN
+Name: individualism, dtype: float64","26   NaN
+26   NaN
+Name: masculinity, dtype: float64","26   NaN
+26   NaN
+Name: uncertainty_avoidance, dtype: float64","26   NaN
+26   NaN
+Name: long_term_orientation, dtype: float64","26   NaN
+26   NaN
+Name: indulgence, dtype: float64",1,0.6865456559788711,1.0,1.0,0.9313680924350884,0.7541783480699426
+PROJ-015,Project 15,Africa,2.0,1,45,3,9.0,35.0,3,1,4.0,Medium,Other,17,"17   NaN
+17   NaN
+Name: power_distance, dtype: float64","17   NaN
+17   NaN
+Name: individualism, dtype: float64","17   NaN
+17   NaN
+Name: masculinity, dtype: float64","17   NaN
+17   NaN
+Name: uncertainty_avoidance, dtype: float64","17   NaN
+17   NaN
+Name: long_term_orientation, dtype: float64","17   NaN
+17   NaN
+Name: indulgence, dtype: float64",1,0.877512137430878,0.9257980258443022,1.0,1.0,0.8732345054421645
+PROJ-016,Project 16,North America,2.0,5,41,28,6.0,98.0,5,3,2.0,High,Technology,25,"25   NaN
+25   NaN
+Name: power_distance, dtype: float64","25   NaN
+25   NaN
+Name: individualism, dtype: float64","25   NaN
+25   NaN
+Name: masculinity, dtype: float64","25   NaN
+25   NaN
+Name: uncertainty_avoidance, dtype: float64","25   NaN
+25   NaN
+Name: long_term_orientation, dtype: float64","25   NaN
+25   NaN
+Name: indulgence, dtype: float64",0,0.9008939127614296,0.2,0.3,0.25,0.1352340862324791
+PROJ-017,Project 17,Middle East,1.0,4,28,28,13.0,18.0,5,5,5.0,High,Other,18,"18   NaN
+18   NaN
+Name: power_distance, dtype: float64","18   NaN
+18   NaN
+Name: individualism, dtype: float64","18   NaN
+18   NaN
+Name: masculinity, dtype: float64","18   NaN
+18   NaN
+Name: uncertainty_avoidance, dtype: float64","18   NaN
+18   NaN
+Name: long_term_orientation, dtype: float64","18   NaN
+18   NaN
+Name: indulgence, dtype: float64",1,0.8534711807030839,1.0,0.8756607878701117,0.8761837225194433,0.8442806381020916
+PROJ-018,Project 18,Middle East,4.0,2,33,3,31.0,19.0,4,4,2.0,Medium,Other,1,"1   NaN
+1   NaN
+Name: power_distance, dtype: float64","1   NaN
+1   NaN
+Name: individualism, dtype: float64","1   NaN
+1   NaN
+Name: masculinity, dtype: float64","1   NaN
+1   NaN
+Name: uncertainty_avoidance, dtype: float64","1   NaN
+1   NaN
+Name: long_term_orientation, dtype: float64","1   NaN
+1   NaN
+Name: indulgence, dtype: float64",1,0.7137378608040644,0.8394456593358921,1.0,1.0,0.9205926807616588
+PROJ-019,Project 19,Africa,1.0,3,50,17,27.0,56.0,1,2,4.0,Medium,Finance,39,"39   NaN
+39   NaN
+Name: power_distance, dtype: float64","39   NaN
+39   NaN
+Name: individualism, dtype: float64","39   NaN
+39   NaN
+Name: masculinity, dtype: float64","39   NaN
+39   NaN
+Name: uncertainty_avoidance, dtype: float64","39   NaN
+39   NaN
+Name: long_term_orientation, dtype: float64","39   NaN
+39   NaN
+Name: indulgence, dtype: float64",1,0.4921942201495401,1.0,0.8924700669463612,0.9317965616800684,0.7692905115288899
+PROJ-020,Project 20,North America,4.0,1,35,4,23.0,17.0,1,4,1.0,High,Manufacturing,60,"60   NaN
+60   NaN
+Name: power_distance, dtype: float64","60   NaN
+60   NaN
+Name: individualism, dtype: float64","60   NaN
+60   NaN
+Name: masculinity, dtype: float64","60   NaN
+60   NaN
+Name: uncertainty_avoidance, dtype: float64","60   NaN
+60   NaN
+Name: long_term_orientation, dtype: float64","60   NaN
+60   NaN
+Name: indulgence, dtype: float64",0,0.8339020729980533,0.2,0.3,0.25,0.1805230856279373
+PROJ-021,Project 21,South America,2.0,1,39,24,12.0,46.0,2,2,5.0,Medium,Technology,4,"4   NaN
+4   NaN
+Name: power_distance, dtype: float64","4   NaN
+4   NaN
+Name: individualism, dtype: float64","4   NaN
+4   NaN
+Name: masculinity, dtype: float64","4   NaN
+4   NaN
+Name: uncertainty_avoidance, dtype: float64","4   NaN
+4   NaN
+Name: long_term_orientation, dtype: float64","4   NaN
+4   NaN
+Name: indulgence, dtype: float64",1,0.8378954304561632,1.0,0.8412040975904378,0.8463548259509771,0.8291449923211807
+PROJ-022,Project 22,Europe,1.0,4,37,18,11.0,48.0,4,5,1.0,Low,Finance,34,"34   NaN
+34   NaN
+Name: power_distance, dtype: float64","34   NaN
+34   NaN
+Name: individualism, dtype: float64","34   NaN
+34   NaN
+Name: masculinity, dtype: float64","34   NaN
+34   NaN
+Name: uncertainty_avoidance, dtype: float64","34   NaN
+34   NaN
+Name: long_term_orientation, dtype: float64","34   NaN
+34   NaN
+Name: indulgence, dtype: float64",1,0.7828786127887577,1.0,1.0,0.8809351427821299,0.726931803619622
+PROJ-023,Project 23,North America,5.0,3,25,27,26.0,13.0,2,2,1.0,Medium,Manufacturing,23,"23   NaN
+23   NaN
+Name: power_distance, dtype: float64","23   NaN
+23   NaN
+Name: individualism, dtype: float64","23   NaN
+23   NaN
+Name: masculinity, dtype: float64","23   NaN
+23   NaN
+Name: uncertainty_avoidance, dtype: float64","23   NaN
+23   NaN
+Name: long_term_orientation, dtype: float64","23   NaN
+23   NaN
+Name: indulgence, dtype: float64",1,0.7152646109481438,1.0,1.0,1.0,0.7802195314103494
+PROJ-024,Project 24,Africa,3.0,5,36,10,20.0,14.0,2,3,1.0,Medium,Manufacturing,3,"3   NaN
+3   NaN
+Name: power_distance, dtype: float64","3   NaN
+3   NaN
+Name: individualism, dtype: float64","3   NaN
+3   NaN
+Name: masculinity, dtype: float64","3   NaN
+3   NaN
+Name: uncertainty_avoidance, dtype: float64","3   NaN
+3   NaN
+Name: long_term_orientation, dtype: float64","3   NaN
+3   NaN
+Name: indulgence, dtype: float64",1,0.6588952278628081,0.9838791531430132,1.0,0.8389155544438254,0.7620242660019758
+PROJ-025,Project 25,Middle East,4.0,3,27,15,34.0,30.0,2,3,3.0,Low,Healthcare,11,"11   NaN
+11   NaN
+Name: power_distance, dtype: float64","11   NaN
+11   NaN
+Name: individualism, dtype: float64","11   NaN
+11   NaN
+Name: masculinity, dtype: float64","11   NaN
+11   NaN
+Name: uncertainty_avoidance, dtype: float64","11   NaN
+11   NaN
+Name: long_term_orientation, dtype: float64","11   NaN
+11   NaN
+Name: indulgence, dtype: float64",1,0.7315851966442878,1.0,0.912814724037575,0.9449272975911364,0.7912361742183522
+PROJ-026,Project 26,South America,3.0,4,37,23,26.0,0.0,3,3,3.0,Low,Technology,41,"41   NaN
+41   NaN
+Name: power_distance, dtype: float64","41   NaN
+41   NaN
+Name: individualism, dtype: float64","41   NaN
+41   NaN
+Name: masculinity, dtype: float64","41   NaN
+41   NaN
+Name: uncertainty_avoidance, dtype: float64","41   NaN
+41   NaN
+Name: long_term_orientation, dtype: float64","41   NaN
+41   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1630543579843966
+PROJ-027,Project 27,North America,3.0,4,7,3,25.0,53.0,3,3,1.0,High,Manufacturing,15,"15   NaN
+15   NaN
+Name: power_distance, dtype: float64","15   NaN
+15   NaN
+Name: individualism, dtype: float64","15   NaN
+15   NaN
+Name: masculinity, dtype: float64","15   NaN
+15   NaN
+Name: uncertainty_avoidance, dtype: float64","15   NaN
+15   NaN
+Name: long_term_orientation, dtype: float64","15   NaN
+15   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1717639986994371
+PROJ-028,Project 28,Europe,1.0,3,22,18,34.0,2.0,2,4,5.0,High,Finance,51,"51   NaN
+51   NaN
+Name: power_distance, dtype: float64","51   NaN
+51   NaN
+Name: individualism, dtype: float64","51   NaN
+51   NaN
+Name: masculinity, dtype: float64","51   NaN
+51   NaN
+Name: uncertainty_avoidance, dtype: float64","51   NaN
+51   NaN
+Name: long_term_orientation, dtype: float64","51   NaN
+51   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1701733649917427
+PROJ-029,Project 29,Europe,3.0,4,29,9,14.0,15.0,4,5,4.0,Low,Healthcare,15,"15   NaN
+15   NaN
+Name: power_distance, dtype: float64","15   NaN
+15   NaN
+Name: individualism, dtype: float64","15   NaN
+15   NaN
+Name: masculinity, dtype: float64","15   NaN
+15   NaN
+Name: uncertainty_avoidance, dtype: float64","15   NaN
+15   NaN
+Name: long_term_orientation, dtype: float64","15   NaN
+15   NaN
+Name: indulgence, dtype: float64",1,0.7557939851137747,1.0,0.9784231343632056,1.0,0.5568286428737852
+PROJ-030,Project 30,Asia Pacific,5.0,3,46,7,15.0,86.0,1,2,4.0,Low,Technology,China,80.0,20.0,66.0,30.0,87.0,24.0,0,0.974210246445322,0.2,0.3,0.25,0.1580538362245594
+PROJ-031,Project 31,Asia Pacific,3.0,2,35,24,25.0,56.0,4,2,2.0,High,Other,37,"37   NaN
+37   NaN
+Name: power_distance, dtype: float64","37   NaN
+37   NaN
+Name: individualism, dtype: float64","37   NaN
+37   NaN
+Name: masculinity, dtype: float64","37   NaN
+37   NaN
+Name: uncertainty_avoidance, dtype: float64","37   NaN
+37   NaN
+Name: long_term_orientation, dtype: float64","37   NaN
+37   NaN
+Name: indulgence, dtype: float64",1,0.7219372011728283,0.937612980398988,1.0,1.0,0.6490578086593237
+PROJ-032,Project 32,Africa,1.0,3,7,25,27.0,74.0,5,3,5.0,Medium,Finance,55,"55   NaN
+55   NaN
+Name: power_distance, dtype: float64","55   NaN
+55   NaN
+Name: individualism, dtype: float64","55   NaN
+55   NaN
+Name: masculinity, dtype: float64","55   NaN
+55   NaN
+Name: uncertainty_avoidance, dtype: float64","55   NaN
+55   NaN
+Name: long_term_orientation, dtype: float64","55   NaN
+55   NaN
+Name: indulgence, dtype: float64",1,0.7783180535882619,0.9463261459758492,0.6584630952850588,0.7531457084115691,0.7724272747532674
+PROJ-033,Project 33,North America,5.0,3,44,5,32.0,11.0,3,3,3.0,Low,Manufacturing,62,"62   NaN
+62   NaN
+Name: power_distance, dtype: float64","62   NaN
+62   NaN
+Name: individualism, dtype: float64","62   NaN
+62   NaN
+Name: masculinity, dtype: float64","62   NaN
+62   NaN
+Name: uncertainty_avoidance, dtype: float64","62   NaN
+62   NaN
+Name: long_term_orientation, dtype: float64","62   NaN
+62   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1575242082437816
+PROJ-034,Project 34,North America,2.0,4,50,14,19.0,73.0,1,1,1.0,High,Manufacturing,39,"39   NaN
+39   NaN
+Name: power_distance, dtype: float64","39   NaN
+39   NaN
+Name: individualism, dtype: float64","39   NaN
+39   NaN
+Name: masculinity, dtype: float64","39   NaN
+39   NaN
+Name: uncertainty_avoidance, dtype: float64","39   NaN
+39   NaN
+Name: long_term_orientation, dtype: float64","39   NaN
+39   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1795229671616942
+PROJ-035,Project 35,Middle East,3.0,4,28,28,22.0,95.0,1,5,2.0,Medium,Finance,30,"30   NaN
+30   NaN
+Name: power_distance, dtype: float64","30   NaN
+30   NaN
+Name: individualism, dtype: float64","30   NaN
+30   NaN
+Name: masculinity, dtype: float64","30   NaN
+30   NaN
+Name: uncertainty_avoidance, dtype: float64","30   NaN
+30   NaN
+Name: long_term_orientation, dtype: float64","30   NaN
+30   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.159397690657998
+PROJ-036,Project 36,Middle East,1.0,1,36,18,27.0,15.0,5,4,4.0,Low,Manufacturing,48,"48   NaN
+48   NaN
+Name: power_distance, dtype: float64","48   NaN
+48   NaN
+Name: individualism, dtype: float64","48   NaN
+48   NaN
+Name: masculinity, dtype: float64","48   NaN
+48   NaN
+Name: uncertainty_avoidance, dtype: float64","48   NaN
+48   NaN
+Name: long_term_orientation, dtype: float64","48   NaN
+48   NaN
+Name: indulgence, dtype: float64",0,0.969211805557887,0.2,0.3,0.25,0.1651843603668652
+PROJ-037,Project 37,Middle East,2.0,1,26,21,24.0,71.0,5,2,3.0,Medium,Healthcare,47,"47   NaN
+47   NaN
+Name: power_distance, dtype: float64","47   NaN
+47   NaN
+Name: individualism, dtype: float64","47   NaN
+47   NaN
+Name: masculinity, dtype: float64","47   NaN
+47   NaN
+Name: uncertainty_avoidance, dtype: float64","47   NaN
+47   NaN
+Name: long_term_orientation, dtype: float64","47   NaN
+47   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1758611276131486
+PROJ-038,Project 38,Asia Pacific,2.0,2,27,7,15.0,75.0,2,1,3.0,High,Technology,38,"38   NaN
+38   NaN
+Name: power_distance, dtype: float64","38   NaN
+38   NaN
+Name: individualism, dtype: float64","38   NaN
+38   NaN
+Name: masculinity, dtype: float64","38   NaN
+38   NaN
+Name: uncertainty_avoidance, dtype: float64","38   NaN
+38   NaN
+Name: long_term_orientation, dtype: float64","38   NaN
+38   NaN
+Name: indulgence, dtype: float64",1,0.875835887013759,1.0,1.0,1.0,0.92277522598193
+PROJ-039,Project 39,North America,4.0,1,6,24,21.0,23.0,3,1,1.0,Low,Healthcare,24,"24   NaN
+24   NaN
+Name: power_distance, dtype: float64","24   NaN
+24   NaN
+Name: individualism, dtype: float64","24   NaN
+24   NaN
+Name: masculinity, dtype: float64","24   NaN
+24   NaN
+Name: uncertainty_avoidance, dtype: float64","24   NaN
+24   NaN
+Name: long_term_orientation, dtype: float64","24   NaN
+24   NaN
+Name: indulgence, dtype: float64",0,0.9848765514722188,0.2,0.3,0.25,0.1575397215328618
+PROJ-040,Project 40,North America,5.0,3,31,27,14.0,27.0,3,2,4.0,Medium,Manufacturing,35,"35   NaN
+35   NaN
+Name: power_distance, dtype: float64","35   NaN
+35   NaN
+Name: individualism, dtype: float64","35   NaN
+35   NaN
+Name: masculinity, dtype: float64","35   NaN
+35   NaN
+Name: uncertainty_avoidance, dtype: float64","35   NaN
+35   NaN
+Name: long_term_orientation, dtype: float64","35   NaN
+35   NaN
+Name: indulgence, dtype: float64",1,0.924784725829762,1.0,0.9619379978758624,0.9549898866309776,0.8094179441680409
+PROJ-041,Project 41,Europe,3.0,4,46,16,21.0,7.0,4,4,5.0,Low,Other,20,"20   NaN
+20   NaN
+Name: power_distance, dtype: float64","20   NaN
+20   NaN
+Name: individualism, dtype: float64","20   NaN
+20   NaN
+Name: masculinity, dtype: float64","20   NaN
+20   NaN
+Name: uncertainty_avoidance, dtype: float64","20   NaN
+20   NaN
+Name: long_term_orientation, dtype: float64","20   NaN
+20   NaN
+Name: indulgence, dtype: float64",1,0.9528472452128748,0.8934436275134974,1.0,0.9453739828969104,0.8010023302242254
+PROJ-042,Project 42,Asia Pacific,1.0,1,6,30,14.0,91.0,2,1,3.0,Medium,Technology,32,"32   NaN
+32   NaN
+Name: power_distance, dtype: float64","32   NaN
+32   NaN
+Name: individualism, dtype: float64","32   NaN
+32   NaN
+Name: masculinity, dtype: float64","32   NaN
+32   NaN
+Name: uncertainty_avoidance, dtype: float64","32   NaN
+32   NaN
+Name: long_term_orientation, dtype: float64","32   NaN
+32   NaN
+Name: indulgence, dtype: float64",0,0.9309556833709228,0.2,0.3,0.25,0.1491480207113785
+PROJ-043,Project 43,South America,4.0,1,30,7,11.0,35.0,2,1,1.0,High,Technology,10,"10   NaN
+10   NaN
+Name: power_distance, dtype: float64","10   NaN
+10   NaN
+Name: individualism, dtype: float64","10   NaN
+10   NaN
+Name: masculinity, dtype: float64","10   NaN
+10   NaN
+Name: uncertainty_avoidance, dtype: float64","10   NaN
+10   NaN
+Name: long_term_orientation, dtype: float64","10   NaN
+10   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1446176955311522
+PROJ-044,Project 44,Asia Pacific,5.0,2,21,17,9.0,89.0,2,5,5.0,High,Finance,13,"13   NaN
+13   NaN
+Name: power_distance, dtype: float64","13   NaN
+13   NaN
+Name: individualism, dtype: float64","13   NaN
+13   NaN
+Name: masculinity, dtype: float64","13   NaN
+13   NaN
+Name: uncertainty_avoidance, dtype: float64","13   NaN
+13   NaN
+Name: long_term_orientation, dtype: float64","13   NaN
+13   NaN
+Name: indulgence, dtype: float64",1,0.8612624231553945,1.0,0.841255059256131,1.0,0.5728114083574065
+PROJ-045,Project 45,South America,4.0,2,44,19,30.0,7.0,2,4,4.0,Low,Finance,66,"66   NaN
+66   NaN
+Name: power_distance, dtype: float64","66   NaN
+66   NaN
+Name: individualism, dtype: float64","66   NaN
+66   NaN
+Name: masculinity, dtype: float64","66   NaN
+66   NaN
+Name: uncertainty_avoidance, dtype: float64","66   NaN
+66   NaN
+Name: long_term_orientation, dtype: float64","66   NaN
+66   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1384667813095134
+PROJ-046,Project 46,Europe,5.0,3,37,16,16.0,57.0,3,1,3.0,Medium,Other,Japan,54.0,46.0,95.0,92.0,88.0,42.0,0,0.9363942127000752,0.2,0.3,0.25,0.1244273833358039
+PROJ-047,Project 47,Africa,5.0,4,13,22,33.0,59.0,3,4,5.0,Low,Technology,24,"24   NaN
+24   NaN
+Name: power_distance, dtype: float64","24   NaN
+24   NaN
+Name: individualism, dtype: float64","24   NaN
+24   NaN
+Name: masculinity, dtype: float64","24   NaN
+24   NaN
+Name: uncertainty_avoidance, dtype: float64","24   NaN
+24   NaN
+Name: long_term_orientation, dtype: float64","24   NaN
+24   NaN
+Name: indulgence, dtype: float64",1,0.6469859884396005,0.927920958106356,1.0,1.0,0.9255198484453252
+PROJ-048,Project 48,North America,3.0,2,47,7,21.0,49.0,2,2,5.0,Low,Other,Japan,54.0,46.0,95.0,92.0,88.0,42.0,1,0.3960006805384989,1.0,1.0,0.8402288080226591,0.8188416008297429
+PROJ-049,Project 49,Europe,5.0,1,43,14,18.0,27.0,4,3,5.0,Medium,Finance,30,"30   NaN
+30   NaN
+Name: power_distance, dtype: float64","30   NaN
+30   NaN
+Name: individualism, dtype: float64","30   NaN
+30   NaN
+Name: masculinity, dtype: float64","30   NaN
+30   NaN
+Name: uncertainty_avoidance, dtype: float64","30   NaN
+30   NaN
+Name: long_term_orientation, dtype: float64","30   NaN
+30   NaN
+Name: indulgence, dtype: float64",1,0.7856790880851943,1.0,0.9148367405238708,0.9483743984062872,0.7874061027053166
+PROJ-050,Project 50,North America,4.0,4,33,18,7.0,91.0,1,1,3.0,Medium,Finance,23,"23   NaN
+23   NaN
+Name: power_distance, dtype: float64","23   NaN
+23   NaN
+Name: individualism, dtype: float64","23   NaN
+23   NaN
+Name: masculinity, dtype: float64","23   NaN
+23   NaN
+Name: uncertainty_avoidance, dtype: float64","23   NaN
+23   NaN
+Name: long_term_orientation, dtype: float64","23   NaN
+23   NaN
+Name: indulgence, dtype: float64",1,0.7562876883428077,0.8781027477463874,1.0,1.0,0.7282514813918919
+PROJ-051,Project 51,Middle East,5.0,4,46,28,14.0,100.0,1,5,3.0,Medium,Technology,38,"38   NaN
+38   NaN
+Name: power_distance, dtype: float64","38   NaN
+38   NaN
+Name: individualism, dtype: float64","38   NaN
+38   NaN
+Name: masculinity, dtype: float64","38   NaN
+38   NaN
+Name: uncertainty_avoidance, dtype: float64","38   NaN
+38   NaN
+Name: long_term_orientation, dtype: float64","38   NaN
+38   NaN
+Name: indulgence, dtype: float64",1,0.6155509492696499,0.9948371527707732,0.828681018505574,0.9200461078767316,0.8029779263234624
+PROJ-052,Project 52,Africa,3.0,1,30,28,27.0,40.0,4,2,2.0,High,Healthcare,15,"15   NaN
+15   NaN
+Name: power_distance, dtype: float64","15   NaN
+15   NaN
+Name: individualism, dtype: float64","15   NaN
+15   NaN
+Name: masculinity, dtype: float64","15   NaN
+15   NaN
+Name: uncertainty_avoidance, dtype: float64","15   NaN
+15   NaN
+Name: long_term_orientation, dtype: float64","15   NaN
+15   NaN
+Name: indulgence, dtype: float64",1,0.6877223902767913,1.0,0.9624521932400508,1.0,0.7152020122344667
+PROJ-053,Project 53,Africa,3.0,2,39,18,23.0,99.0,2,4,4.0,Low,Manufacturing,39,"39   NaN
+39   NaN
+Name: power_distance, dtype: float64","39   NaN
+39   NaN
+Name: individualism, dtype: float64","39   NaN
+39   NaN
+Name: masculinity, dtype: float64","39   NaN
+39   NaN
+Name: uncertainty_avoidance, dtype: float64","39   NaN
+39   NaN
+Name: long_term_orientation, dtype: float64","39   NaN
+39   NaN
+Name: indulgence, dtype: float64",0,0.8033168484737327,0.2,0.3,0.25,0.1634803711324121
+PROJ-054,Project 54,Europe,4.0,1,29,23,25.0,63.0,3,2,1.0,Low,Finance,28,"28   NaN
+28   NaN
+Name: power_distance, dtype: float64","28   NaN
+28   NaN
+Name: individualism, dtype: float64","28   NaN
+28   NaN
+Name: masculinity, dtype: float64","28   NaN
+28   NaN
+Name: uncertainty_avoidance, dtype: float64","28   NaN
+28   NaN
+Name: long_term_orientation, dtype: float64","28   NaN
+28   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1649146796584271
+PROJ-055,Project 55,Africa,2.0,4,28,9,18.0,26.0,1,1,5.0,High,Finance,53,"53   NaN
+53   NaN
+Name: power_distance, dtype: float64","53   NaN
+53   NaN
+Name: individualism, dtype: float64","53   NaN
+53   NaN
+Name: masculinity, dtype: float64","53   NaN
+53   NaN
+Name: uncertainty_avoidance, dtype: float64","53   NaN
+53   NaN
+Name: long_term_orientation, dtype: float64","53   NaN
+53   NaN
+Name: indulgence, dtype: float64",1,0.6265450788207534,0.9597965189654776,1.0,0.9891962300210748,0.7138616297643257
+PROJ-056,Project 56,South America,2.0,5,17,6,16.0,62.0,5,4,2.0,Medium,Healthcare,40,"40   NaN
+40   NaN
+Name: power_distance, dtype: float64","40   NaN
+40   NaN
+Name: individualism, dtype: float64","40   NaN
+40   NaN
+Name: masculinity, dtype: float64","40   NaN
+40   NaN
+Name: uncertainty_avoidance, dtype: float64","40   NaN
+40   NaN
+Name: long_term_orientation, dtype: float64","40   NaN
+40   NaN
+Name: indulgence, dtype: float64",1,1.0,1.0,0.7161723626764499,0.993120915356512,0.7119538035177595
+PROJ-057,Project 57,Africa,5.0,5,11,3,33.0,16.0,5,3,1.0,High,Healthcare,17,"17   NaN
+17   NaN
+Name: power_distance, dtype: float64","17   NaN
+17   NaN
+Name: individualism, dtype: float64","17   NaN
+17   NaN
+Name: masculinity, dtype: float64","17   NaN
+17   NaN
+Name: uncertainty_avoidance, dtype: float64","17   NaN
+17   NaN
+Name: long_term_orientation, dtype: float64","17   NaN
+17   NaN
+Name: indulgence, dtype: float64",0,0.973659804893345,0.2,0.3,0.25,0.1792439870919023
+PROJ-058,Project 58,North America,1.0,3,40,7,7.0,72.0,4,2,2.0,High,Other,20,"20   NaN
+20   NaN
+Name: power_distance, dtype: float64","20   NaN
+20   NaN
+Name: individualism, dtype: float64","20   NaN
+20   NaN
+Name: masculinity, dtype: float64","20   NaN
+20   NaN
+Name: uncertainty_avoidance, dtype: float64","20   NaN
+20   NaN
+Name: long_term_orientation, dtype: float64","20   NaN
+20   NaN
+Name: indulgence, dtype: float64",1,0.5860571738427535,1.0,0.8593330249195135,1.0,0.79471400457087
+PROJ-059,Project 59,North America,5.0,1,49,25,25.0,32.0,2,1,3.0,High,Other,65,"65   NaN
+65   NaN
+Name: power_distance, dtype: float64","65   NaN
+65   NaN
+Name: individualism, dtype: float64","65   NaN
+65   NaN
+Name: masculinity, dtype: float64","65   NaN
+65   NaN
+Name: uncertainty_avoidance, dtype: float64","65   NaN
+65   NaN
+Name: long_term_orientation, dtype: float64","65   NaN
+65   NaN
+Name: indulgence, dtype: float64",0,0.9381530321897708,0.2,0.3,0.25,0.1443795914147022
+PROJ-060,Project 60,North America,4.0,1,24,28,31.0,83.0,1,5,5.0,Low,Manufacturing,65,"65   NaN
+65   NaN
+Name: power_distance, dtype: float64","65   NaN
+65   NaN
+Name: individualism, dtype: float64","65   NaN
+65   NaN
+Name: masculinity, dtype: float64","65   NaN
+65   NaN
+Name: uncertainty_avoidance, dtype: float64","65   NaN
+65   NaN
+Name: long_term_orientation, dtype: float64","65   NaN
+65   NaN
+Name: indulgence, dtype: float64",1,0.4882058535183622,1.0,0.903550266477868,1.0,0.7629493698310481
+PROJ-061,Project 61,North America,4.0,3,5,12,13.0,76.0,2,4,1.0,High,Manufacturing,26,"26   NaN
+26   NaN
+Name: power_distance, dtype: float64","26   NaN
+26   NaN
+Name: individualism, dtype: float64","26   NaN
+26   NaN
+Name: masculinity, dtype: float64","26   NaN
+26   NaN
+Name: uncertainty_avoidance, dtype: float64","26   NaN
+26   NaN
+Name: long_term_orientation, dtype: float64","26   NaN
+26   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1397881182658678
+PROJ-062,Project 62,South America,4.0,3,12,24,20.0,91.0,1,2,1.0,Low,Technology,57,"57   NaN
+57   NaN
+Name: power_distance, dtype: float64","57   NaN
+57   NaN
+Name: individualism, dtype: float64","57   NaN
+57   NaN
+Name: masculinity, dtype: float64","57   NaN
+57   NaN
+Name: uncertainty_avoidance, dtype: float64","57   NaN
+57   NaN
+Name: long_term_orientation, dtype: float64","57   NaN
+57   NaN
+Name: indulgence, dtype: float64",1,0.6370150450331317,1.0,1.0,1.0,0.7932816419338083
+PROJ-063,Project 63,Asia Pacific,4.0,3,50,7,14.0,28.0,4,2,1.0,Low,Other,24,"24   NaN
+24   NaN
+Name: power_distance, dtype: float64","24   NaN
+24   NaN
+Name: individualism, dtype: float64","24   NaN
+24   NaN
+Name: masculinity, dtype: float64","24   NaN
+24   NaN
+Name: uncertainty_avoidance, dtype: float64","24   NaN
+24   NaN
+Name: long_term_orientation, dtype: float64","24   NaN
+24   NaN
+Name: indulgence, dtype: float64",1,0.8696879185596607,1.0,0.9179357053919348,1.0,0.8831628307664469
+PROJ-064,Project 64,Middle East,4.0,4,20,6,11.0,12.0,4,3,1.0,Low,Finance,1,"1   NaN
+1   NaN
+Name: power_distance, dtype: float64","1   NaN
+1   NaN
+Name: individualism, dtype: float64","1   NaN
+1   NaN
+Name: masculinity, dtype: float64","1   NaN
+1   NaN
+Name: uncertainty_avoidance, dtype: float64","1   NaN
+1   NaN
+Name: long_term_orientation, dtype: float64","1   NaN
+1   NaN
+Name: indulgence, dtype: float64",0,0.9587878757238374,0.2,0.3,0.25,0.1594465866481147
+PROJ-065,Project 65,Europe,3.0,1,18,4,12.0,45.0,5,3,1.0,Medium,Other,46,"46   NaN
+46   NaN
+Name: power_distance, dtype: float64","46   NaN
+46   NaN
+Name: individualism, dtype: float64","46   NaN
+46   NaN
+Name: masculinity, dtype: float64","46   NaN
+46   NaN
+Name: uncertainty_avoidance, dtype: float64","46   NaN
+46   NaN
+Name: long_term_orientation, dtype: float64","46   NaN
+46   NaN
+Name: indulgence, dtype: float64",1,0.9076663167528468,1.0,0.9347761357134632,0.8687720614661081,1.0
+PROJ-066,Project 66,North America,2.0,4,16,22,19.0,34.0,2,5,2.0,Low,Finance,45,"45   NaN
+45   NaN
+Name: power_distance, dtype: float64","45   NaN
+45   NaN
+Name: individualism, dtype: float64","45   NaN
+45   NaN
+Name: masculinity, dtype: float64","45   NaN
+45   NaN
+Name: uncertainty_avoidance, dtype: float64","45   NaN
+45   NaN
+Name: long_term_orientation, dtype: float64","45   NaN
+45   NaN
+Name: indulgence, dtype: float64",1,0.8136183623975561,0.960167909397604,0.8963679381570684,0.8437345214733921,0.8421359568049002
+PROJ-067,Project 67,Africa,4.0,3,27,12,9.0,5.0,5,5,5.0,Low,Healthcare,21,"21   NaN
+21   NaN
+Name: power_distance, dtype: float64","21   NaN
+21   NaN
+Name: individualism, dtype: float64","21   NaN
+21   NaN
+Name: masculinity, dtype: float64","21   NaN
+21   NaN
+Name: uncertainty_avoidance, dtype: float64","21   NaN
+21   NaN
+Name: long_term_orientation, dtype: float64","21   NaN
+21   NaN
+Name: indulgence, dtype: float64",1,0.7042895165077515,0.9738033563681447,1.0,0.866877020728593,0.8229954447842213
+PROJ-068,Project 68,North America,1.0,1,19,28,15.0,81.0,2,1,3.0,Medium,Other,26,"26   NaN
+26   NaN
+Name: power_distance, dtype: float64","26   NaN
+26   NaN
+Name: individualism, dtype: float64","26   NaN
+26   NaN
+Name: masculinity, dtype: float64","26   NaN
+26   NaN
+Name: uncertainty_avoidance, dtype: float64","26   NaN
+26   NaN
+Name: long_term_orientation, dtype: float64","26   NaN
+26   NaN
+Name: indulgence, dtype: float64",1,0.9370348881026233,0.9492320217534338,1.0,1.0,0.7091697869034195
+PROJ-069,Project 69,Africa,1.0,4,32,21,11.0,68.0,5,1,3.0,Low,Healthcare,9,"9   NaN
+9   NaN
+Name: power_distance, dtype: float64","9   NaN
+9   NaN
+Name: individualism, dtype: float64","9   NaN
+9   NaN
+Name: masculinity, dtype: float64","9   NaN
+9   NaN
+Name: uncertainty_avoidance, dtype: float64","9   NaN
+9   NaN
+Name: long_term_orientation, dtype: float64","9   NaN
+9   NaN
+Name: indulgence, dtype: float64",1,0.8428440191555814,1.0,0.7197699400067282,0.9920921252393649,0.7761466553157333
+PROJ-070,Project 70,Middle East,1.0,4,38,28,29.0,46.0,3,5,3.0,High,Manufacturing,23,"23   NaN
+23   NaN
+Name: power_distance, dtype: float64","23   NaN
+23   NaN
+Name: individualism, dtype: float64","23   NaN
+23   NaN
+Name: masculinity, dtype: float64","23   NaN
+23   NaN
+Name: uncertainty_avoidance, dtype: float64","23   NaN
+23   NaN
+Name: long_term_orientation, dtype: float64","23   NaN
+23   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1444197231393261
+PROJ-071,Project 71,Middle East,1.0,3,6,3,4.0,24.0,3,5,3.0,High,Manufacturing,19,"19   NaN
+19   NaN
+Name: power_distance, dtype: float64","19   NaN
+19   NaN
+Name: individualism, dtype: float64","19   NaN
+19   NaN
+Name: masculinity, dtype: float64","19   NaN
+19   NaN
+Name: uncertainty_avoidance, dtype: float64","19   NaN
+19   NaN
+Name: long_term_orientation, dtype: float64","19   NaN
+19   NaN
+Name: indulgence, dtype: float64",0,0.9385817132532692,0.2,0.3,0.25,0.1166870954319175
+PROJ-072,Project 72,Middle East,3.0,1,36,26,7.0,65.0,3,4,2.0,Low,Technology,48,"48   NaN
+48   NaN
+Name: power_distance, dtype: float64","48   NaN
+48   NaN
+Name: individualism, dtype: float64","48   NaN
+48   NaN
+Name: masculinity, dtype: float64","48   NaN
+48   NaN
+Name: uncertainty_avoidance, dtype: float64","48   NaN
+48   NaN
+Name: long_term_orientation, dtype: float64","48   NaN
+48   NaN
+Name: indulgence, dtype: float64",1,0.7114924158187691,0.986113741280533,0.9220219912676868,1.0,0.8974262222128808
+PROJ-073,Project 73,Africa,1.0,3,27,7,31.0,9.0,3,3,4.0,Medium,Other,25,"25   NaN
+25   NaN
+Name: power_distance, dtype: float64","25   NaN
+25   NaN
+Name: individualism, dtype: float64","25   NaN
+25   NaN
+Name: masculinity, dtype: float64","25   NaN
+25   NaN
+Name: uncertainty_avoidance, dtype: float64","25   NaN
+25   NaN
+Name: long_term_orientation, dtype: float64","25   NaN
+25   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1497709888889954
+PROJ-074,Project 74,North America,4.0,1,26,15,21.0,55.0,1,1,5.0,High,Healthcare,19,"19   NaN
+19   NaN
+Name: power_distance, dtype: float64","19   NaN
+19   NaN
+Name: individualism, dtype: float64","19   NaN
+19   NaN
+Name: masculinity, dtype: float64","19   NaN
+19   NaN
+Name: uncertainty_avoidance, dtype: float64","19   NaN
+19   NaN
+Name: long_term_orientation, dtype: float64","19   NaN
+19   NaN
+Name: indulgence, dtype: float64",0,0.7684693282247331,0.2,0.3,0.25,0.1447919985133338
+PROJ-075,Project 75,Middle East,5.0,5,29,6,10.0,29.0,3,3,1.0,Medium,Finance,15,"15   NaN
+15   NaN
+Name: power_distance, dtype: float64","15   NaN
+15   NaN
+Name: individualism, dtype: float64","15   NaN
+15   NaN
+Name: masculinity, dtype: float64","15   NaN
+15   NaN
+Name: uncertainty_avoidance, dtype: float64","15   NaN
+15   NaN
+Name: long_term_orientation, dtype: float64","15   NaN
+15   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1642114006791693
+PROJ-076,Project 76,South America,1.0,2,26,18,3.0,4.0,4,3,4.0,Medium,Manufacturing,China,80.0,20.0,66.0,30.0,87.0,24.0,1,0.7658954136522206,1.0,1.0,1.0,0.8512499552221517
+PROJ-077,Project 77,Africa,3.0,2,26,26,24.0,32.0,4,5,3.0,High,Manufacturing,3,"3   NaN
+3   NaN
+Name: power_distance, dtype: float64","3   NaN
+3   NaN
+Name: individualism, dtype: float64","3   NaN
+3   NaN
+Name: masculinity, dtype: float64","3   NaN
+3   NaN
+Name: uncertainty_avoidance, dtype: float64","3   NaN
+3   NaN
+Name: long_term_orientation, dtype: float64","3   NaN
+3   NaN
+Name: indulgence, dtype: float64",0,0.8667683866829128,0.2,0.3,0.25,0.1535845033418744
+PROJ-078,Project 78,Africa,3.0,2,46,18,19.0,64.0,1,4,4.0,Medium,Finance,18,"18   NaN
+18   NaN
+Name: power_distance, dtype: float64","18   NaN
+18   NaN
+Name: individualism, dtype: float64","18   NaN
+18   NaN
+Name: masculinity, dtype: float64","18   NaN
+18   NaN
+Name: uncertainty_avoidance, dtype: float64","18   NaN
+18   NaN
+Name: long_term_orientation, dtype: float64","18   NaN
+18   NaN
+Name: indulgence, dtype: float64",1,0.4955440512173317,0.8665196161781024,0.8035034262576408,0.9077567313988522,0.7997398332390983
+PROJ-079,Project 79,North America,1.0,3,10,25,9.0,17.0,3,2,5.0,High,Healthcare,28,"28   NaN
+28   NaN
+Name: power_distance, dtype: float64","28   NaN
+28   NaN
+Name: individualism, dtype: float64","28   NaN
+28   NaN
+Name: masculinity, dtype: float64","28   NaN
+28   NaN
+Name: uncertainty_avoidance, dtype: float64","28   NaN
+28   NaN
+Name: long_term_orientation, dtype: float64","28   NaN
+28   NaN
+Name: indulgence, dtype: float64",1,0.5991265790304574,1.0,0.7552748767923753,1.0,0.8746187407314403
+PROJ-080,Project 80,Africa,5.0,5,19,4,27.0,95.0,3,4,1.0,Medium,Healthcare,33,"33   NaN
+33   NaN
+Name: power_distance, dtype: float64","33   NaN
+33   NaN
+Name: individualism, dtype: float64","33   NaN
+33   NaN
+Name: masculinity, dtype: float64","33   NaN
+33   NaN
+Name: uncertainty_avoidance, dtype: float64","33   NaN
+33   NaN
+Name: long_term_orientation, dtype: float64","33   NaN
+33   NaN
+Name: indulgence, dtype: float64",0,0.6572770641511643,0.2,0.3,0.25,0.152796128107801
+PROJ-081,Project 81,Africa,1.0,1,47,19,6.0,48.0,3,4,1.0,High,Other,1,"1   NaN
+1   NaN
+Name: power_distance, dtype: float64","1   NaN
+1   NaN
+Name: individualism, dtype: float64","1   NaN
+1   NaN
+Name: masculinity, dtype: float64","1   NaN
+1   NaN
+Name: uncertainty_avoidance, dtype: float64","1   NaN
+1   NaN
+Name: long_term_orientation, dtype: float64","1   NaN
+1   NaN
+Name: indulgence, dtype: float64",1,0.6265690834462744,1.0,0.7844249858886561,0.926699393672336,0.8302333741763335
+PROJ-082,Project 82,Middle East,3.0,4,41,30,8.0,10.0,5,3,5.0,Low,Other,58,"58   NaN
+58   NaN
+Name: power_distance, dtype: float64","58   NaN
+58   NaN
+Name: individualism, dtype: float64","58   NaN
+58   NaN
+Name: masculinity, dtype: float64","58   NaN
+58   NaN
+Name: uncertainty_avoidance, dtype: float64","58   NaN
+58   NaN
+Name: long_term_orientation, dtype: float64","58   NaN
+58   NaN
+Name: indulgence, dtype: float64",1,0.7933834500013872,1.0,0.8166643304386654,0.9256709997035032,0.634075538161085
+PROJ-083,Project 83,North America,2.0,1,37,29,33.0,84.0,2,4,5.0,High,Technology,41,"41   NaN
+41   NaN
+Name: power_distance, dtype: float64","41   NaN
+41   NaN
+Name: individualism, dtype: float64","41   NaN
+41   NaN
+Name: masculinity, dtype: float64","41   NaN
+41   NaN
+Name: uncertainty_avoidance, dtype: float64","41   NaN
+41   NaN
+Name: long_term_orientation, dtype: float64","41   NaN
+41   NaN
+Name: indulgence, dtype: float64",0,0.928554903854676,0.2,0.3,0.25,0.135173620031445
+PROJ-084,Project 84,Middle East,4.0,4,12,22,21.0,25.0,5,1,3.0,High,Manufacturing,39,"39   NaN
+39   NaN
+Name: power_distance, dtype: float64","39   NaN
+39   NaN
+Name: individualism, dtype: float64","39   NaN
+39   NaN
+Name: masculinity, dtype: float64","39   NaN
+39   NaN
+Name: uncertainty_avoidance, dtype: float64","39   NaN
+39   NaN
+Name: long_term_orientation, dtype: float64","39   NaN
+39   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1721107955616081
+PROJ-085,Project 85,Middle East,3.0,1,48,26,29.0,62.0,2,3,1.0,High,Other,31,"31   NaN
+31   NaN
+Name: power_distance, dtype: float64","31   NaN
+31   NaN
+Name: individualism, dtype: float64","31   NaN
+31   NaN
+Name: masculinity, dtype: float64","31   NaN
+31   NaN
+Name: uncertainty_avoidance, dtype: float64","31   NaN
+31   NaN
+Name: long_term_orientation, dtype: float64","31   NaN
+31   NaN
+Name: indulgence, dtype: float64",1,0.9489921404087932,1.0,1.0,1.0,0.6706441360832702
+PROJ-086,Project 86,North America,1.0,5,48,14,12.0,88.0,3,1,4.0,High,Healthcare,China,80.0,20.0,66.0,30.0,87.0,24.0,1,0.8913466723938661,1.0,1.0,1.0,0.8234137547113296
+PROJ-087,Project 87,Europe,4.0,4,9,20,28.0,85.0,3,2,2.0,Medium,Finance,46,"46   NaN
+46   NaN
+Name: power_distance, dtype: float64","46   NaN
+46   NaN
+Name: individualism, dtype: float64","46   NaN
+46   NaN
+Name: masculinity, dtype: float64","46   NaN
+46   NaN
+Name: uncertainty_avoidance, dtype: float64","46   NaN
+46   NaN
+Name: long_term_orientation, dtype: float64","46   NaN
+46   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1570600243560585
+PROJ-088,Project 88,Middle East,1.0,3,43,5,21.0,58.0,5,3,2.0,Low,Healthcare,64,"64   NaN
+64   NaN
+Name: power_distance, dtype: float64","64   NaN
+64   NaN
+Name: individualism, dtype: float64","64   NaN
+64   NaN
+Name: masculinity, dtype: float64","64   NaN
+64   NaN
+Name: uncertainty_avoidance, dtype: float64","64   NaN
+64   NaN
+Name: long_term_orientation, dtype: float64","64   NaN
+64   NaN
+Name: indulgence, dtype: float64",0,0.6512981091270296,0.2,0.3,0.25,0.1527106547495954
+PROJ-089,Project 89,South America,1.0,1,8,30,5.0,26.0,5,2,5.0,High,Manufacturing,0,"0   NaN
+0   NaN
+Name: power_distance, dtype: float64","0   NaN
+0   NaN
+Name: individualism, dtype: float64","0   NaN
+0   NaN
+Name: masculinity, dtype: float64","0   NaN
+0   NaN
+Name: uncertainty_avoidance, dtype: float64","0   NaN
+0   NaN
+Name: long_term_orientation, dtype: float64","0   NaN
+0   NaN
+Name: indulgence, dtype: float64",1,0.5944453761951091,0.8811513278073568,1.0,1.0,0.7171537231032272
+PROJ-090,Project 90,South America,2.0,1,10,3,15.0,48.0,2,3,3.0,Medium,Healthcare,Kenya,70.0,25.0,60.0,50.0,30.0,40.0,1,0.6786942209838419,1.0,0.7665076043804795,0.894061445619086,0.8909340018105376
+PROJ-091,Project 91,Africa,4.0,4,49,3,30.0,76.0,4,5,2.0,Low,Technology,66,"66   NaN
+66   NaN
+Name: power_distance, dtype: float64","66   NaN
+66   NaN
+Name: individualism, dtype: float64","66   NaN
+66   NaN
+Name: masculinity, dtype: float64","66   NaN
+66   NaN
+Name: uncertainty_avoidance, dtype: float64","66   NaN
+66   NaN
+Name: long_term_orientation, dtype: float64","66   NaN
+66   NaN
+Name: indulgence, dtype: float64",1,0.5659198525742783,1.0,0.8357074821855257,1.0,0.9729891154519836
+PROJ-092,Project 92,South America,4.0,3,36,21,22.0,32.0,2,4,1.0,Low,Manufacturing,65,"65   NaN
+65   NaN
+Name: power_distance, dtype: float64","65   NaN
+65   NaN
+Name: individualism, dtype: float64","65   NaN
+65   NaN
+Name: masculinity, dtype: float64","65   NaN
+65   NaN
+Name: uncertainty_avoidance, dtype: float64","65   NaN
+65   NaN
+Name: long_term_orientation, dtype: float64","65   NaN
+65   NaN
+Name: indulgence, dtype: float64",0,0.9790741786770144,0.2,0.3,0.25,0.1660038432520039
+PROJ-093,Project 93,Africa,2.0,3,34,13,30.0,97.0,5,5,5.0,Low,Finance,35,"35   NaN
+35   NaN
+Name: power_distance, dtype: float64","35   NaN
+35   NaN
+Name: individualism, dtype: float64","35   NaN
+35   NaN
+Name: masculinity, dtype: float64","35   NaN
+35   NaN
+Name: uncertainty_avoidance, dtype: float64","35   NaN
+35   NaN
+Name: long_term_orientation, dtype: float64","35   NaN
+35   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1664498143134563
+PROJ-094,Project 94,Europe,3.0,5,39,7,10.0,98.0,5,2,4.0,Low,Technology,9,"9   NaN
+9   NaN
+Name: power_distance, dtype: float64","9   NaN
+9   NaN
+Name: individualism, dtype: float64","9   NaN
+9   NaN
+Name: masculinity, dtype: float64","9   NaN
+9   NaN
+Name: uncertainty_avoidance, dtype: float64","9   NaN
+9   NaN
+Name: long_term_orientation, dtype: float64","9   NaN
+9   NaN
+Name: indulgence, dtype: float64",1,0.4531335205727022,1.0,0.971637779625719,0.9925146614065152,0.7317669370142507
+PROJ-095,Project 95,North America,1.0,3,44,14,3.0,0.0,1,4,5.0,High,Manufacturing,6,"6   NaN
+6   NaN
+Name: power_distance, dtype: float64","6   NaN
+6   NaN
+Name: individualism, dtype: float64","6   NaN
+6   NaN
+Name: masculinity, dtype: float64","6   NaN
+6   NaN
+Name: uncertainty_avoidance, dtype: float64","6   NaN
+6   NaN
+Name: long_term_orientation, dtype: float64","6   NaN
+6   NaN
+Name: indulgence, dtype: float64",1,0.971753808417854,0.8369326632584737,0.9784731483466882,1.0,0.680390276817562
+PROJ-096,Project 96,North America,5.0,3,20,5,5.0,20.0,5,3,4.0,High,Finance,China,80.0,20.0,66.0,30.0,87.0,24.0,0,1.0,0.2,0.3,0.25,0.1592052219038765
+PROJ-097,Project 97,North America,1.0,3,17,3,15.0,54.0,1,4,5.0,Medium,Technology,60,"60   NaN
+60   NaN
+Name: power_distance, dtype: float64","60   NaN
+60   NaN
+Name: individualism, dtype: float64","60   NaN
+60   NaN
+Name: masculinity, dtype: float64","60   NaN
+60   NaN
+Name: uncertainty_avoidance, dtype: float64","60   NaN
+60   NaN
+Name: long_term_orientation, dtype: float64","60   NaN
+60   NaN
+Name: indulgence, dtype: float64",0,1.0,0.2,0.3,0.25,0.1405250070408385
+PROJ-098,Project 98,South America,1.0,2,46,3,30.0,5.0,4,1,5.0,Medium,Technology,43,"43   NaN
+43   NaN
+Name: power_distance, dtype: float64","43   NaN
+43   NaN
+Name: individualism, dtype: float64","43   NaN
+43   NaN
+Name: masculinity, dtype: float64","43   NaN
+43   NaN
+Name: uncertainty_avoidance, dtype: float64","43   NaN
+43   NaN
+Name: long_term_orientation, dtype: float64","43   NaN
+43   NaN
+Name: indulgence, dtype: float64",1,0.5929575166388854,0.9466896075135488,0.9056606663216962,0.9610582122506962,0.6227389871684179
+PROJ-099,Project 99,Europe,3.0,5,34,10,27.0,91.0,2,4,5.0,Medium,Manufacturing,26,"26   NaN
+26   NaN
+Name: power_distance, dtype: float64","26   NaN
+26   NaN
+Name: individualism, dtype: float64","26   NaN
+26   NaN
+Name: masculinity, dtype: float64","26   NaN
+26   NaN
+Name: uncertainty_avoidance, dtype: float64","26   NaN
+26   NaN
+Name: long_term_orientation, dtype: float64","26   NaN
+26   NaN
+Name: indulgence, dtype: float64",1,0.5689074481762861,1.0,0.8762547434601271,1.0,0.8803445812365582
+PROJ-100,Project 100,South America,1.0,1,23,12,35.0,80.0,2,1,4.0,Low,Other,10,"10   NaN
+10   NaN
+Name: power_distance, dtype: float64","10   NaN
+10   NaN
+Name: individualism, dtype: float64","10   NaN
+10   NaN
+Name: masculinity, dtype: float64","10   NaN
+10   NaN
+Name: uncertainty_avoidance, dtype: float64","10   NaN
+10   NaN
+Name: long_term_orientation, dtype: float64","10   NaN
+10   NaN
+Name: indulgence, dtype: float64",1,0.456067342811689,1.0,1.0,0.961596782211986,0.8852166788251834
+,,,,4,15,8,,,2,3,,,,,35,89,66,35,,,1,,,,,
+,,,,3,20,12,,,3,4,,,,,40,91,62,46,,,1,,,,,
+,,,,5,10,6,,,1,2,,,,,80,20,66,30,,,0,,,,,
+,,,,3,8,5,,,1,1,,,,,35,67,66,65,,,1,,,,,
+,,,,2,12,10,,,4,5,,,,,49,65,63,49,,,0,,,,,

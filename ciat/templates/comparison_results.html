@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}CIAT - Comparison Results{% endblock %}
+
+{% block head_extra %}
+<style>
+    .comparison-card { height: 100%; }
+    .chart-container { 
+        margin-bottom: 30px; 
+        cursor: pointer;
+    }
+    .chart-container img {
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .chart-container img:hover {
+        transform: scale(1.02);
+    }
+    .country-badge {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        margin: 0.2rem;
+        border-radius: 30px;
+        background-color: #e9ecef;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="h3 mb-0">Cultural Dimensions Comparison</h1>
+                </div>
+                <div class="card-body">
+                    <!-- Countries Being Compared -->
+                    <div class="mb-4">
+                        <h4>Countries Compared:</h4>
+                        <div>
+                            {% for country in countries %}
+                                <span class="country-badge">{{ country }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Radar Chart -->
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-info text-white">
+                                    <h4>Cultural Dimensions Radar Chart</h4>
+                                </div>
+                                <div class="card-body text-center">
+                                    {% if radar_plot %}
+                                        <img src="data:image/png;base64,{{ radar_plot }}" 
+                                             alt="Cultural Dimensions Radar Chart" 
+                                             class="img-fluid chart-container">
+                                    {% else %}
+                                        <div class="alert alert-warning">
+                                            No radar chart available
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Distances -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-success text-white">
+                                    <h4>Cultural Distances</h4>
+                                </div>
+                                <div class="card-body">
+                                    {% if distances %}
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Country Pair</th>
+                                                    <th>Distance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for d in distances %}
+                                                    <tr>
+                                                        <td>{{ d.country1 }} vs {{ d.country2 }}</td>
+                                                        <td>{{ d.distance|round(2) }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    {% else %}
+                                        <div class="alert alert-warning">
+                                            No distance data available
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Heatmap -->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-warning text-dark">
+                                    <h4>Cultural Dimensions Heatmap</h4>
+                                </div>
+                                <div class="card-body text-center">
+                                    {% if heatmap_plot %}
+                                        <img src="data:image/png;base64,{{ heatmap_plot }}" 
+                                             alt="Cultural Dimensions Heatmap" 
+                                             class="img-fluid chart-container">
+                                    {% else %}
+                                        <div class="alert alert-warning">
+                                            No heatmap available
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regional Insights -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h4>Regional Insights</h4>
+                                </div>
+                                <div class="card-body">
+                                    {% if regional_insights %}
+                                        <div class="row">
+                                            {% for country, insights in regional_insights.items() %}
+                                                <div class="col-md-4 mb-3">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h5>{{ country }}</h5>
+                                                            <small class="text-muted">Region: {{ insights.region }}</small>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h6>Regional Survey Focus</h6>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" 
+                                                                     style="width: {{ insights.survey_focus }}%">
+                                                                    {{ insights.survey_focus|round(1) }}%
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <div class="alert alert-warning">
+                                            No regional insights available
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add lightbox effect to charts
+    const charts = document.querySelectorAll('.chart-container');
+    charts.forEach(chart => {
+        chart.addEventListener('click', function() {
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            overlay.style.display = 'flex';
+            overlay.style.alignItems = 'center';
+            overlay.style.justifyContent = 'center';
+            overlay.style.zIndex = '9999';
+
+            const imgClone = this.cloneNode(true);
+            imgClone.style.maxWidth = '90%';
+            imgClone.style.maxHeight = '90%';
+
+            overlay.appendChild(imgClone);
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener('click', function() {
+                document.body.removeChild(overlay);
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

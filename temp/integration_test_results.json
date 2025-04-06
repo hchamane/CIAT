@@ -1,0 +1,33 @@
+{
+  "communication_impact": 1.0,
+  "regional_impact": {
+    "Europe": {
+      "focus_value": 0.6,
+      "experience_level": "High",
+      "risk_level": "Low"
+    },
+    "North America": {
+      "focus_value": 0.0,
+      "experience_level": "Unknown",
+      "risk_level": "High"
+    },
+    "Asia-Pacific": {
+      "focus_value": 0.0,
+      "experience_level": "Unknown",
+      "risk_level": "High"
+    }
+  },
+  "risk_factors": {
+    "num__individualism": 0.2147154072686761,
+    "num__uncertainty_avoidance": 0.2105074705060617,
+    "num__indulgence": 0.14387468736503953,
+    "num__team_size": 0.10152276354937971,
+    "num__long_term_orientation": 0.09588403020406001
+  },
+  "success_probability": 0.00040625713744923817,
+  "recommendations": [
+    "Focus on team cohesion through virtual team-building and regular check-ins.",
+    "Review and revise project plan to address cultural impact factors.",
+    "Consider bringing in cultural experts or consultants for high-risk areas."
+  ]
+}

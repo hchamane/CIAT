@@ -1,0 +1,47 @@
+cultural-impact-tool/
+│
+├── ciat/
+│   ├── __init__.py
+│   ├── cultural_impact_model.py
+│   ├── data_processor.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── web_interface.py
+│   │
+│   ├── data/
+│   │   ├── hofstede_dimensions.csv  
+│   │   ├── project_data.csv    
+│   │   ├── survey_results.csv  
+│   │   └── ciat_model.joblib 
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   ├── fonts/
+│   │   ├── images/
+│   │   ├── js/
+│   │
+│   ├── templates/
+│   │   ├── assess.html
+│   │   ├── base.html
+│   │   ├── compare.html
+│   │   ├── comparison_results.html
+│   │   ├── error.html
+│   │   ├── index.html
+│   │   ├── results.html
+│   │   ├── survey_insights.html
+│   │   ├── train.html
+│   │   └── upload.html         
+│   │      
+│   ├── uploads/
+│   │
+│   ├── utils/
+│   │   ├── generate_sample_data.py
+│   │   ├── logger.py
+│   │   ├── init_app_parts.py
+│   │   └── visualisation_utils.py
+│
+├── README.md 
+├── requirements.txt 
+├── run.py 
+├── setup.py 
+└── structure.txt
