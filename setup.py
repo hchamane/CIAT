@@ -55,7 +55,7 @@ setup(
     international project success.
     """,
     author="Hainadine Chamane",
-    author_email="hchamane@gmail.com",
+    author_email="hchamane@outlook.com",
     url="https://github.com/hchamane/CIAT",
     packages=find_packages(),
     include_package_data=True,
