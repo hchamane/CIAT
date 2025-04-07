@@ -42,7 +42,6 @@ References:
         Sage Publications.
         
 Inspired by and adapted from:
-    - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
     - https://github.com/reasonablecow/cultural_dimensions/blob/main/notebook.ipynb
     - https://github.com/streamlit/demo-culture-map/tree/main/culture_map
     - https://github.com/rishabhRsinghvi/CrowdFunding-Campaign-Success-Prediction/blob/main/Modeling.ipynb
@@ -63,6 +62,9 @@ Inspired by and adapted from:
     - https://github.com/microsoft/responsible-ai-toolbox
     - https://github.com/scikit-learn-contrib/imbalanced-learn
     - https://github.com/databricks/koalas
+
+Refinements with the help of:
+    - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
         
 Author: Hainadine Chamane
 Version: 1.0.0
