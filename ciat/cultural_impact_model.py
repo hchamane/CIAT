@@ -118,7 +118,6 @@ class CulturalImpactModel:
         positioned on Meyer's cultural map,' Review of International Business and Strategy, 34(1), pp. 126–151.
     - https://github.com/ratloop/MatchOutcomeAI/blob/main/model_comparison/gradient_boosting.ipynb
     - https://github.com/MoinDalvs/Gradient_Boosting_Algorithms_From_Scratch?tab=readme-ov-file
-    - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
     - https://github.com/scikit-learn-contrib/imbalanced-learn
     """
     def __init__(self):
@@ -200,6 +199,7 @@ class CulturalImpactModel:
            - https://github.com/shaadclt/Data-Preprocessing-Pipeline
            - https://github.com/jakobrunge/tigramite/blob/master/tigramite/data_processing.py
            - https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/compose/_column_transformer.py
+        Refinements with the help of:
            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
         """
         if X is None or len(X) == 0:
@@ -288,7 +288,6 @@ class CulturalImpactModel:
             - https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/03.04-Missing-Values.ipynb
             - https://github.com/Hari-prasaanth/Checklist/blob/main/Secure-Coding-Practices/Secure-Coding-Practices.md
             - https://github.com/pandas-dev/pandas/blob/master/pandas/core/dtypes/missing.py
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
         """
         for col in X.columns:
             # Check for NaN values
@@ -339,7 +338,6 @@ class CulturalImpactModel:
             - https://github.com/WillKoehrsen/machine-learning-project-walkthrough/blob/master/Machine%20Learning%20Project%20Part%202.ipynb
             - https://github.com/dr-mushtaq/Machine-Learning/blob/master/Supervised_(Classification)_ML_Model_Training_and_Evulation_.ipynb
             - https://github.com/scikit-learn-contrib/imbalanced-learn/blob/master/examples/ensemble/plot_bagging_classifier.py
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
             - https://scikit-learn.org/stable/modules/cross_validation.html
         """
         # Validate inputs
@@ -482,8 +480,9 @@ class CulturalImpactModel:
             
         References:
             - https://github.com/dr-mushtaq/Machine-Learning/blob/master/Supervised_(Classification)_ML_Model_Training_and_Evulation_.ipynb
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
             - https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/ensemble/_forest.py
+        Refinements with the help of:
+            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
         """
         if self.preprocessor is None or self.model is None:
             raise ValueError("Model has not been trained. Call train() first.")
@@ -526,7 +525,6 @@ class CulturalImpactModel:
             - Da Cunha, H.C., Farrel, C., Floriani, D.E., Andersson, S. and Amal, M (2022) 'Toward a more in-depth measurement 
               of cultural distance: A re-evaluation of the underlying assumptions,' International Journal of Cross-Cultural Management, 
               22(1), pp. 157–188.
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
             - https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/metrics/pairwise.py
         """
        
@@ -576,9 +574,10 @@ class CulturalImpactModel:
         
         References:
             - https://github.com/shap/shap
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
             - https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/ensemble/_forest.py
             - https://github.com/slundberg/shap/blob/master/notebooks/feature_selection/credit_card_fraud_feature_selection.ipynb
+        Refinements with the help of:
+            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
         """
         if self.model is None:
             raise ValueError("Model has not been trained. Call train() first.")
@@ -652,7 +651,7 @@ class CulturalImpactModel:
             logger.error("No communication factors available in project data")
             return 0.5  # Return neutral impact if no data available
         
-        # Calculate weighted communication impact score
+        # Calculate the weighted communication impact score
         # Weights based on survey results
         weights = {
             'language_barriers': 0.25,
@@ -929,9 +928,10 @@ class CulturalImpactModel:
             The created figure object
             
         References:
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
             - https://github.com/mwaskom/seaborn/blob/master/seaborn/categorical.py
             - https://github.com/mpltools/mpltools/blob/master/mpltools/color.py
+        Refinements with the help of:
+            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
         """
         # Get top N risk factors
         top_factors = list(risk_factors.items())[:top_n]
@@ -1004,7 +1004,6 @@ class CulturalImpactModel:
             - https://github.com/slundberg/shap
             - https://github.com/TeamHG-Memex/eli5
             - https://github.com/interpretml/interpret
-            - https://github.com/marketplace/models/azure-openai/gpt-4o/playground
             - https://github.com/TeamHG-Memex/eli5/blob/master/eli5/explain.py
             - https://github.com/slundberg/shap/blob/master/shap/explainers/tree.py
             - https://github.com/interpretml/interpret/blob/master/python/interpret-core/interpret/glassbox/ebm/ebm.py
